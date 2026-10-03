@@ -1,0 +1,27 @@
+{
+  "source_freeze": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029",
+  "native_freeze": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4N_NATIVE_GRID_FREEZE_20261001_233019",
+  "source_config": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029\\S4_PRODUCTION_GRID_v1_0.json",
+  "native_config": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4N_NATIVE_GRID_FREEZE_20261001_233019\\S4_PRODUCTION_GRID_v1_0.json",
+  "source_config_sha256": "9a9755d8d6bc9cc51d0c6312853374e339b141c599095cadd8282934e73339b8",
+  "native_config_sha256": "5f5406b1c094765f80b6603aac690ad789f35f778519bb7105d4d85d14c45f98",
+  "scientific_grid_unchanged": true,
+  "changes": {
+    "seed_namespace": [
+      "AMPV_PRODUCTION_v1_0",
+      "AMPV_V2_NATIVE_PRODUCTION_v1_0"
+    ],
+    "master_seed": [
+      20260930,
+      20261001
+    ],
+    "rn_design_seed": [
+      42,
+      20261001
+    ],
+    "engine_root": [
+      "external CAPS/JATIS canonical tree",
+      "D:\\Papers\\AMPV_V2\\02_CORE\\AMPV_V2_ENGINE_SNAPSHOT_v1_0_20261001_230125"
+    ]
+  }
+}

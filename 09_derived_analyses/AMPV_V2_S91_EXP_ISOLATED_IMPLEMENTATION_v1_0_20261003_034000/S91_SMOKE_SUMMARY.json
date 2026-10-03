@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scientific_outcomes_generated": false,
+  "F_REF": 1000.0,
+  "intrinsic_amplitude_range": [
+    0.8,
+    1.2
+  ],
+  "sigma_range": [
+    1.5,
+    4.0
+  ],
+  "lhs_seed": 20261003,
+  "I2P": {
+    "center_distance_px": [
+      38,
+      70
+    ],
+    "sigma_major_px": [
+      5,
+      12
+    ],
+    "sigma_minor_px": [
+      1.5,
+      3.5
+    ],
+    "peak_scale": "0.02*F_REF*level",
+    "depends_on_sample_truth": false
+  },
+  "determinism": {
+    "source": true,
+    "i2p": true,
+    "lhs": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "figures_reviewed": 6,
+  "current_figure_set_pass": 5,
+  "superseded_failures": 1,
+  "active_figure_failures": 0,
+  "figure1_active_version": "v1.1",
+  "scientific_values_changed": false,
+  "canonical_modified": false,
+  "status": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "S90-EXP Implementation and Analytic Freeze",
+  "version": "v1.0",
+  "status": "PASS_TO_IMPLEMENTATION",
+  "scientific_outcomes_generated": false,
+  "task_family": "COMPACT_PSF_PRIMARY",
+  "I2_direct_reuse": false,
+  "I2_replacement_required": "I2P",
+  "workflow_D_sigma_annulus_rejected_pre_outcome": true,
+  "primary_workflows": [
+    "A",
+    "B",
+    "C",
+    "E"
+  ],
+  "lhs_seed": 20261003,
+  "analysis_seed": 20261004,
+  "production_authorized": false,
+  "canonical_modified": false,
+  "existing_production_rerun": false,
+  "next_stage": "S91 isolated implementation and clean/determinism smoke tests"
+}

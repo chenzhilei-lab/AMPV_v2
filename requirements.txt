@@ -1,0 +1,6 @@
+# Third-party Python dependencies detected from repository source imports.
+# Exact package versions were not assigned here because this packaging step does not infer or fabricate version pins.
+numpy
+scipy
+pandas
+photutils

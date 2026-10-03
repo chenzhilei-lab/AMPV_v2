@@ -1,0 +1,47 @@
+[
+  {
+    "relative_path": "__pycache__/compound_interference_v1_0_0.cpython-314.pyc",
+    "size": 27012,
+    "sha256": "4ac4fe383ea6e725460aaa56d199ce1aea1fbdc997b8d436bc2a5ed1ef8c90dc"
+  },
+  {
+    "relative_path": "__pycache__/xv02_benchmark_canonical_v1_0_0.cpython-314.pyc",
+    "size": 40822,
+    "sha256": "bc9d5f9d2d4cbd34e09f6f0460254a363dfd1a288cb867bdb0738d74eb39a4d5"
+  },
+  {
+    "relative_path": "__pycache__/xv02_forward_model_v1_0_0.cpython-314.pyc",
+    "size": 2640,
+    "sha256": "2d0e75c934cbd9b3b9cf86f2f7b52b10661c1000b5373d5d5370086c9f6649d5"
+  },
+  {
+    "relative_path": "CANONICAL_PROTOCOL_v1_0_0.md",
+    "size": 1848,
+    "sha256": "c699d5689568089db2253c3b527590e906ff008280996e5dc32ad36c437976ec"
+  },
+  {
+    "relative_path": "compound_interference_v1_0_0.py",
+    "size": 17848,
+    "sha256": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c"
+  },
+  {
+    "relative_path": "RELEASE_MANIFEST_v1_0_0.json",
+    "size": 1893,
+    "sha256": "897d653ca65ccc9ae568916aec721e127609a1bfbc92f07119d6f4b6cecfab28"
+  },
+  {
+    "relative_path": "RELEASE_SMOKE_v1_0_0.json",
+    "size": 565,
+    "sha256": "2208716a3bc590a1e2254d67851634dffee65d0fa655f54412e7517872302fb9"
+  },
+  {
+    "relative_path": "xv02_benchmark_canonical_v1_0_0.py",
+    "size": 27698,
+    "sha256": "79891c96ccc03ecc8f86bf7174ac83529f7ceeafde628ef43e1abd3c71485dbd"
+  },
+  {
+    "relative_path": "xv02_forward_model_v1_0_0.py",
+    "size": 862,
+    "sha256": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282"
+  }
+]

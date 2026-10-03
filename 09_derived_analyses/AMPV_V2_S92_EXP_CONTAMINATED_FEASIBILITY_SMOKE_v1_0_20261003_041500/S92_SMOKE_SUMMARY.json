@@ -1,0 +1,27 @@
+{
+  "stage": "S92-EXP",
+  "status": "PASS",
+  "purpose": "engineering feasibility only",
+  "sample_ids": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "rows": 240,
+  "runtime_seconds": 2.762075901031494,
+  "checks": {
+    "rows_240": true,
+    "all_finite": true,
+    "all_cells_present": true,
+    "four_workflows_each_cell": true,
+    "paired_sigma_across_conditions": true,
+    "F_scales_exactly_with_kappa": true,
+    "E_optimizer_success_all": true,
+    "C0_i2p_zero_by_construction": true,
+    "representative_determinism": true
+  },
+  "row_sha256": "2fe219cb31735bd0e785ca4c46d10b704ed07887f1ae9aa7ec6e608eb39208b9",
+  "scientific_interpretation_authorized": false,
+  "full_production_authorized": false
+}

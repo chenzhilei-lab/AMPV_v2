@@ -1,0 +1,21 @@
+{
+  "release": "AMPV_V2_CANONICAL_RELEASE_v1_0",
+  "created_at": "2026-10-02T07:40:07",
+  "canonical_promoted": true,
+  "promotion_authorized_by": "D:\\Papers\\AMPV_V2\\07_CANONICAL_OUTPUTS\\AMPV_V2_NATIVE_PROMOTION_GATE_20261002_004116\\S7_NATIVE_CANONICAL_PROMOTION_GATE.json",
+  "source_production": "D:\\Papers\\AMPV_V2\\06_PRODUCTION\\AMPV_V2_NATIVE_PRODUCTION_20261001_234112",
+  "source_ledger": "D:\\Papers\\AMPV_V2\\08_NUMERICAL_LEDGER\\AMPV_V2_NATIVE_NUMERICAL_LEDGER_20261002_003803",
+  "source_engine_snapshot": "D:\\Papers\\AMPV_V2\\02_CORE\\AMPV_V2_ENGINE_SNAPSHOT_v1_0_20261001_230125",
+  "source_native_freeze": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4N_NATIVE_GRID_FREEZE_20261001_233019",
+  "source_native_authorization": "D:\\Papers\\AMPV_V2\\05_PILOT\\S4_AUTHORIZATION\\S4_PRODUCTION_AUTHORIZATION_NATIVE_20261001_233019",
+  "source_s7_gate": "D:\\Papers\\AMPV_V2\\07_CANONICAL_OUTPUTS\\AMPV_V2_NATIVE_PROMOTION_GATE_20261002_004116",
+  "production_rows_sha256": "ee596bf8028ef454a879a42a7d5d2f7c84bb385c8dc0f7534686f5fe1cd43a94",
+  "numerical_ledger_sha256": "4512d5091fad7a4e7a01f0d86d849a745351860a5901676f6178827a8759fbde",
+  "s6_audit_sha256": "2889f39cfc7262a55e521ee60f8cca611ca532c8b889f4ef54b72bfef511b941",
+  "seed_namespace": "AMPV_V2_NATIVE_PRODUCTION_v1_0",
+  "production_version": "AMPV_V2_NATIVE_PRODUCTION_v1_0",
+  "rows": 22500,
+  "matched_scenes": 4500,
+  "canonical_source_files_modified": false,
+  "note": "Promotion is implemented as a new immutable-style release directory. Source production, ledger, engine snapshot, freeze, authorization, and gate remain untouched."
+}

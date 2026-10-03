@@ -1,0 +1,12 @@
+{
+  "stage": "S9 Results + Figure Builder",
+  "source_s8": "D:\\Papers\\AMPV_V2\\10_FIGURES\\AMPV_V2_MANUSCRIPT_SOURCE_DATA_20261002_074010",
+  "source_canonical_release": "D:\\Papers\\AMPV_V2\\07_CANONICAL_OUTPUTS\\AMPV_V2_CANONICAL_RELEASE_20261002_074007",
+  "source_ledger_sha256": "4512d5091fad7a4e7a01f0d86d849a745351860a5901676f6178827a8759fbde",
+  "source_global_summary_sha256": "a4d753bd539eb567f8a87e9cafb35131e00530bd2cfa7a3cd431ebdaa1a97ad5",
+  "source_canonical_rows_sha256": "ee596bf8028ef454a879a42a7d5d2f7c84bb385c8dc0f7534686f5fe1cd43a94",
+  "canonical_rows": 22500,
+  "ledger_groups": 75,
+  "canonical_modified": false,
+  "interpretive_claims_added": false
+}

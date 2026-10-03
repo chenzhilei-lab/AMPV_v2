@@ -1,0 +1,10 @@
+{
+  "stage": "S8 Results Source Export",
+  "canonical_release": "D:\\Papers\\AMPV_V2\\07_CANONICAL_OUTPUTS\\AMPV_V2_CANONICAL_RELEASE_20261002_073615",
+  "source_production_rows": "D:\\Papers\\AMPV_V2\\07_CANONICAL_OUTPUTS\\AMPV_V2_CANONICAL_RELEASE_20261002_073615\\01_PRODUCTION\\PRODUCTION_ROWS.csv",
+  "source_numerical_ledger": "D:\\Papers\\AMPV_V2\\07_CANONICAL_OUTPUTS\\AMPV_V2_CANONICAL_RELEASE_20261002_073615\\02_NUMERICAL_LEDGER\\NUMERICAL_LEDGER.csv",
+  "rows": 22500,
+  "ledger_groups": 75,
+  "interpretive_claims_added": false,
+  "note": "These are source-data exports only. They do not rank methods or add manuscript conclusions."
+}

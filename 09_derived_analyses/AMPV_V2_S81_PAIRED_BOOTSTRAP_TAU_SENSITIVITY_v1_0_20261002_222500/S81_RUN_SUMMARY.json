@@ -1,0 +1,8 @@
+{
+  "rows": 22500,
+  "sample_ids": 300,
+  "bootstrap_B": 2000,
+  "seed": 20261002,
+  "E_non_success": 3,
+  "max_abs_E_median_delta": 9.02434481125005e-05
+}

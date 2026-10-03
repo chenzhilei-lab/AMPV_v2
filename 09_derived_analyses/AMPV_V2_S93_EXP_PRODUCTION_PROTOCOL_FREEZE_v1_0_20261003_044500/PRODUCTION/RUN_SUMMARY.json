@@ -1,0 +1,9 @@
+{
+  "rows": 18000,
+  "sample_ids": 300,
+  "cells": 60,
+  "runtime_seconds": 386.54337787628174,
+  "all_finite": true,
+  "E_non_success": 0,
+  "rows_sha256": "44feafab2c14a86a51647103800e7e4c988ca15b136e88911df00bfd168dc948"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "v1.0.0",
+  "purpose": "release promotion verification only; not scientific production",
+  "n_samples": 5,
+  "baseline_repeat_hash_1": "23f3cece58da5492f0ccc624649f639fc5613ff727cb96813f988708bf79bb67",
+  "baseline_repeat_hash_2": "23f3cece58da5492f0ccc624649f639fc5613ff727cb96813f988708bf79bb67",
+  "baseline_exact_reproducibility": true,
+  "ablation_differs_from_baseline": {
+    "no_I1": true,
+    "no_I2": true,
+    "no_I3": true,
+    "no_I4": true,
+    "no_I5": true,
+    "no_I6": true
+  },
+  "all_ablation_cases_differ": true
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\preflight_production_v1_0.py",
+    "token": "D:\\Papers\\JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 6,
+        "text": "CAN=Path(r\"D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\")"
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\preflight_production_v1_0.py",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 6,
+        "text": "CAN=Path(r\"D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\")"
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\preflight_production_v1_0.py",
+    "token": "CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL",
+    "matches": [
+      {
+        "line": 6,
+        "text": "CAN=Path(r\"D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\")"
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\preflight_production_v1_0.py",
+    "token": "01_CANONICAL_PIPELINE\\v1.0.0_FINAL",
+    "matches": [
+      {
+        "line": 6,
+        "text": "CAN=Path(r\"D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\")"
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\run_AMPV_V2_production_v1_0.py",
+    "token": "D:\\Papers\\JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 14,
+        "text": "CANONICAL_ROOT = Path(r\"D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\")"
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\run_AMPV_V2_production_v1_0.py",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 14,
+        "text": "CANONICAL_ROOT = Path(r\"D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\")"
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\run_AMPV_V2_production_v1_0.py",
+    "token": "CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL",
+    "matches": [
+      {
+        "line": 14,
+        "text": "CANONICAL_ROOT = Path(r\"D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\")"
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\run_AMPV_V2_production_v1_0.py",
+    "token": "01_CANONICAL_PIPELINE\\v1.0.0_FINAL",
+    "matches": [
+      {
+        "line": 14,
+        "text": "CANONICAL_ROOT = Path(r\"D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\")"
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\config\\S3_PILOT_CONFIG_v1_1.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 2,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\scripts\\AMPV_S3_PILOT_20260930_165851\\S3_CONFIG_USED.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 2,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\scripts\\AMPV_S3_PILOT_20260930_165959\\S3_CONFIG_USED.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 2,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\scripts\\AMPV_S3_PILOT_20260930_232311\\S3_CONFIG_USED.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 2,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\config\\S3_PILOT_CONFIG_v1_1.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 2,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\scripts\\AMPV_S3_PILOT_20260930_165851\\S3_CONFIG_USED.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 2,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\AMPV_V2_S3_PILOT_IMPLEMENTATION_v1_1\\scripts\\AMPV_S3_PILOT_20260930_165959\\S3_CONFIG_USED.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 2,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\06_PRODUCTION\\AMPV_V2_PRODUCTION_20261001_090953\\PRODUCTION_AUTHORIZATION_SNAPSHOT.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 139,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\xv02_benchmark_canonical_v1_0_0.py\""
+      },
+      {
+        "line": 144,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\compound_interference_v1_0_0.py\""
+      },
+      {
+        "line": 149,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\xv02_forward_model_v1_0_0.py\""
+      },
+      {
+        "line": 154,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\CANONICAL_PROTOCOL_v1_0_0.md\""
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\06_PRODUCTION\\AMPV_V2_PRODUCTION_20261001_090953\\PRODUCTION_CONFIG_SNAPSHOT.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 5,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\05_PILOT\\S4_AUTHORIZATION\\S4_PRODUCTION_AUTHORIZATION_20261001_003435\\S4_PRODUCTION_AUTHORIZATION.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 139,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\xv02_benchmark_canonical_v1_0_0.py\""
+      },
+      {
+        "line": 144,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\compound_interference_v1_0_0.py\""
+      },
+      {
+        "line": 149,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\xv02_forward_model_v1_0_0.py\""
+      },
+      {
+        "line": 154,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\CANONICAL_PROTOCOL_v1_0_0.md\""
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029\\S4_FREEZE_AUDIT.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 10,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\xv02_benchmark_canonical_v1_0_0.py\""
+      },
+      {
+        "line": 15,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\compound_interference_v1_0_0.py\""
+      },
+      {
+        "line": 20,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\xv02_forward_model_v1_0_0.py\""
+      },
+      {
+        "line": 25,
+        "text": "      \"detail\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\\\\CANONICAL_PROTOCOL_v1_0_0.md\""
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  },
+  {
+    "file": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029\\S4_PRODUCTION_GRID_v1_0.json",
+    "token": "JATIS-Done-Backup",
+    "matches": [
+      {
+        "line": 5,
+        "text": "  \"canonical_root\": \"D:\\\\Papers\\\\JATIS-Done-Backup\\\\CLEAN_MASTER_20260927_073905\\\\01_CANONICAL_PIPELINE\\\\v1.0.0_FINAL\","
+      }
+    ],
+    "classification": "EXECUTION_RELEVANT"
+  }
+]

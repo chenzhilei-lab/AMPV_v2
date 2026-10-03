@@ -1,0 +1,17 @@
+{
+  "stage": "S94-EXP Preregistered Statistical Analysis",
+  "version": "v1.0",
+  "status": "PASS",
+  "source_sha256": "44feafab2c14a86a51647103800e7e4c988ca15b136e88911df00bfd168dc948",
+  "bootstrap_B": 2000,
+  "seed": 20261004,
+  "contamination_positive_CI": "40/40",
+  "adjacent_kappa_negative_CI_all": "32/48",
+  "adjacent_kappa_negative_CI_contaminated": "32/32",
+  "workflow_pair_positive": 30,
+  "workflow_pair_negative": 20,
+  "workflow_pair_zero": 40,
+  "post_outcome_tuning": false,
+  "canonical_modified": false,
+  "next_stage": "cross-family structural comparison"
+}

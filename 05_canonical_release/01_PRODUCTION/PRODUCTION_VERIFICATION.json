@@ -1,0 +1,380 @@
+{
+  "checks": [
+    {
+      "name": "canonical unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "row count",
+      "pass": true,
+      "detail": "22500/22500"
+    },
+    {
+      "name": "K1_C0p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K1_C0p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K1_C0p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K1_C0p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K1_C0p6 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K1_C0p6 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K1_C0p6 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K1_C0p6 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K1_C1p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K1_C1p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K1_C1p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K1_C1p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K2_C0p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K2_C0p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K2_C0p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K2_C0p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K2_C0p6 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K2_C0p6 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K2_C0p6 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K2_C0p6 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K2_C1p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K2_C1p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K2_C1p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K2_C1p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K5_C0p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K5_C0p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K5_C0p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K5_C0p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K5_C0p6 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K5_C0p6 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K5_C0p6 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K5_C0p6 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K5_C1p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K5_C1p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K5_C1p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K5_C1p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K10_C0p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K10_C0p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K10_C0p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K10_C0p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K10_C0p6 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K10_C0p6 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K10_C0p6 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K10_C0p6 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K10_C1p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K10_C1p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K10_C1p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K10_C1p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K20_C0p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K20_C0p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K20_C0p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K20_C0p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K20_C0p6 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K20_C0p6 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K20_C0p6 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K20_C0p6 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K20_C1p0 rows",
+      "pass": true,
+      "detail": "1500"
+    },
+    {
+      "name": "K20_C1p0 sample ids",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "K20_C1p0 workflows complete",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "K20_C1p0 scene match",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "cross-cell same rn",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "cross-cell same seeds",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "cross-cell same unscaled structured RMS",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "C=0.0 scaling",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C=0.6 scaling",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C=1.0 scaling",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "K=1.0 same source gain",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "K=2.0 same source gain",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "K=5.0 same source gain",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "K=10.0 same source gain",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "K=20.0 same source gain",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Method E >=95% nonexception",
+      "pass": true,
+      "detail": "4500/4500"
+    },
+    {
+      "name": "Method E diagnostics",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "all_pass": true
+}

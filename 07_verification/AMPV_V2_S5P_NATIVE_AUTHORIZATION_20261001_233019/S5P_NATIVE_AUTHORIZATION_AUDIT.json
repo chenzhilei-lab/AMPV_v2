@@ -1,0 +1,24 @@
+{
+  "stage": "V2-S5P Native Production Authorization",
+  "source_freeze": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029",
+  "native_freeze": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4N_NATIVE_GRID_FREEZE_20261001_233019",
+  "source_authorization": "D:\\Papers\\AMPV_V2\\05_PILOT\\S4_AUTHORIZATION\\S4_PRODUCTION_AUTHORIZATION_20261001_003435\\S4_PRODUCTION_AUTHORIZATION.json",
+  "native_authorization": "D:\\Papers\\AMPV_V2\\05_PILOT\\S4_AUTHORIZATION\\S4_PRODUCTION_AUTHORIZATION_NATIVE_20261001_233019\\S4_PRODUCTION_AUTHORIZATION.json",
+  "engine_snapshot": "D:\\Papers\\AMPV_V2\\02_CORE\\AMPV_V2_ENGINE_SNAPSHOT_v1_0_20261001_230125",
+  "old_seed_namespace": "AMPV_PRODUCTION_v1_0",
+  "new_seed_namespace": "AMPV_V2_NATIVE_PRODUCTION_v1_0",
+  "old_master_seed": 20260930,
+  "new_master_seed": 20261001,
+  "old_rn_seed": 42,
+  "new_rn_seed": 20261001,
+  "scientific_grid_unchanged": true,
+  "native_config_sha256": "5f5406b1c094765f80b6603aac690ad789f35f778519bb7105d4d85d14c45f98",
+  "engine_hashes": {
+    "xv02_benchmark_canonical_v1_0_0.py": "79891c96ccc03ecc8f86bf7174ac83529f7ceeafde628ef43e1abd3c71485dbd",
+    "compound_interference_v1_0_0.py": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c",
+    "xv02_forward_model_v1_0_0.py": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282",
+    "CANONICAL_PROTOCOL_v1_0_0.md": "c699d5689568089db2253c3b527590e906ff008280996e5dc32ad36c437976ec"
+  },
+  "status": "AUTHORIZED",
+  "next_step": "Patch the captured real S5 runner to use this native authorization/config and V2-owned engine snapshot, then execute a fresh production run."
+}

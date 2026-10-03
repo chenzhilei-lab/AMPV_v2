@@ -1,0 +1,136 @@
+{
+  "project": "AMPV V2",
+  "stage": "V2-S4",
+  "design_version": "S4_PRODUCTION_GRID_v1_0",
+  "canonical_root": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL",
+  "canonical_files": {
+    "benchmark": "xv02_benchmark_canonical_v1_0_0.py",
+    "interference": "compound_interference_v1_0_0.py",
+    "forward": "xv02_forward_model_v1_0_0.py",
+    "protocol": "CANONICAL_PROTOCOL_v1_0_0.md"
+  },
+  "reference_regime": "R3",
+  "reference_rn_km": 1.0,
+  "reference_aperture_radius_px": 30,
+  "kappa_ref_levels": [
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "contamination_levels": [
+    0.0,
+    0.6,
+    1.0
+  ],
+  "N_per_cell": 300,
+  "methods": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "rn_design": {
+    "seed": 42,
+    "lo": 0.3,
+    "hi": 5.0
+  },
+  "calibration": {
+    "n_grid": 40,
+    "lo": 0.1,
+    "hi": 10.0
+  },
+  "tau": 0.5,
+  "seed_policy": {
+    "master_seed": 20260930,
+    "production_version": "AMPV_PRODUCTION_v1_0",
+    "fidelity": "F0",
+    "task_family": "COMET_LIKE_PRIMARY",
+    "seed_namespace": "AMPV_PRODUCTION_v1_0"
+  },
+  "expected": {
+    "cells": 15,
+    "matched_scenes": 4500,
+    "workflow_evaluations": 22500
+  },
+  "pilot_evidence": {
+    "S3": {
+      "P1": {
+        "C": 0.0,
+        "kappa_ref": 80.0,
+        "N": 20
+      },
+      "P2": {
+        "C": 0.6,
+        "kappa_ref": 20.0,
+        "N": 20
+      },
+      "P3": {
+        "C": 1.0,
+        "kappa_ref": 5.0,
+        "N": 20
+      }
+    },
+    "S3X": {
+      "X1": {
+        "C": 0.0,
+        "kappa_ref": 2.0,
+        "N": 20,
+        "vulnerable": {
+          "A": 1,
+          "B": 1,
+          "C": 3,
+          "D": 2,
+          "E": 0
+        }
+      },
+      "X2": {
+        "C": 1.0,
+        "kappa_ref": 2.0,
+        "N": 20,
+        "vulnerable": {
+          "A": 2,
+          "B": 0,
+          "C": 4,
+          "D": 1,
+          "E": 0
+        }
+      },
+      "X3": {
+        "C": 0.0,
+        "kappa_ref": 1.0,
+        "N": 20,
+        "vulnerable": {
+          "A": 3,
+          "B": 2,
+          "C": 7,
+          "D": 2,
+          "E": 0
+        }
+      },
+      "X4": {
+        "C": 1.0,
+        "kappa_ref": 1.0,
+        "N": 20,
+        "vulnerable": {
+          "A": 3,
+          "B": 3,
+          "C": 7,
+          "D": 3,
+          "E": 1
+        }
+      }
+    }
+  },
+  "runtime_projection": {
+    "pilot_median_seconds_per_matched_scene": 0.1142985,
+    "pilot_p95_seconds_per_matched_scene": 0.12439,
+    "projected_median_minutes_for_4500_scenes": 8.572,
+    "projected_p95_minutes_for_4500_scenes": 9.329,
+    "server_recommended": false
+  },
+  "production_authorized": false,
+  "freeze_status": "DESIGN_FREEZE_PENDING_LOCAL_AUDIT"
+}

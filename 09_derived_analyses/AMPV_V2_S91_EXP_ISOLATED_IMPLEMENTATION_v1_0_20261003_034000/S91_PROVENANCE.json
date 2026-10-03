@@ -1,0 +1,26 @@
+{
+  "stage": "S91-EXP Isolated Implementation",
+  "version": "v1.0",
+  "status": "PASS_TO_FEASIBILITY_SMOKE",
+  "scientific_outcomes_generated": false,
+  "task_family": "COMPACT_PSF_PRIMARY",
+  "workflows": [
+    "A",
+    "B",
+    "C",
+    "E"
+  ],
+  "clean_max_abs_rel_error": {
+    "A": 6.617710823775269e-13,
+    "B": 6.617710823775269e-13,
+    "C": 6.617710823775269e-13,
+    "E": 1.7178081179736181e-12
+  },
+  "determinism_pass": true,
+  "candidate_sha256": "5DADD954B2786168BD5F2D68E7E87279A5FD3A1E45A74F7ED072738C0BD3B5C1",
+  "feasibility_smoke_authorized": true,
+  "full_production_authorized": false,
+  "canonical_modified": false,
+  "existing_production_rerun": false,
+  "next_stage": "S92 small contaminated feasibility smoke then production protocol freeze"
+}

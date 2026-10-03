@@ -1,0 +1,33 @@
+{
+  "release": "v1.0.0",
+  "created": "2026-09-27T07:22:26",
+  "promoted_from": "v1.0.0-rc1",
+  "gate1_audit_report": "D:\\Papers\\Jatis-0919\\CAPS_revision_v2\\05_canonical_v1_0_0_rc1\\audit_reports\\GATE1_FINAL_AUDIT_REPORT_20260927_065648.json",
+  "gate1_audit_sha256": "93660041a53a827a1fc32c425e2956f032c3ad53f5a7580b9c6716a0bc3c4320",
+  "rc1_inputs": {
+    "interference": {
+      "path": "D:\\Papers\\Jatis-0919\\CAPS_revision_v2\\05_canonical_v1_0_0_rc1\\compound_interference_v1_0_0_rc1.py",
+      "sha256": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c"
+    },
+    "forward": {
+      "path": "D:\\Papers\\Jatis-0919\\CAPS_revision_v2\\05_canonical_v1_0_0_rc1\\xv02_forward_model_v1_0_0_rc1.py",
+      "sha256": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282"
+    },
+    "benchmark": {
+      "path": "D:\\Papers\\Jatis-0919\\CAPS_revision_v2\\05_canonical_v1_0_0_rc1\\xv02_benchmark_canonical_v1_0_0_rc1.py",
+      "sha256": "a6cca310b48aa0c6d2ed22c67af00926af77d1beeb4defb65349994336afd167"
+    },
+    "protocol": {
+      "path": "D:\\Papers\\Jatis-0919\\CAPS_revision_v2\\05_canonical_v1_0_0_rc1\\CANONICAL_PROTOCOL_v1_0_0_rc1.md",
+      "sha256": "4a460b86e72bbbc5a244e7d7c9a9b10ff10b8e4864ac0173c2999eaf0a9f56dd"
+    }
+  },
+  "release_files": {
+    "CANONICAL_PROTOCOL_v1_0_0.md": "c699d5689568089db2253c3b527590e906ff008280996e5dc32ad36c437976ec",
+    "compound_interference_v1_0_0.py": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c",
+    "RELEASE_SMOKE_v1_0_0.json": "2208716a3bc590a1e2254d67851634dffee65d0fa655f54412e7517872302fb9",
+    "xv02_benchmark_canonical_v1_0_0.py": "79891c96ccc03ecc8f86bf7174ac83529f7ceeafde628ef43e1abd3c71485dbd",
+    "xv02_forward_model_v1_0_0.py": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282"
+  },
+  "production_status": "NOT_RUN"
+}

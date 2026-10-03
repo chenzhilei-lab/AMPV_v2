@@ -1,0 +1,15 @@
+{
+  "before": {
+    "xv02_benchmark_canonical_v1_0_0.py": "79891c96ccc03ecc8f86bf7174ac83529f7ceeafde628ef43e1abd3c71485dbd",
+    "compound_interference_v1_0_0.py": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c",
+    "xv02_forward_model_v1_0_0.py": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282",
+    "CANONICAL_PROTOCOL_v1_0_0.md": "c699d5689568089db2253c3b527590e906ff008280996e5dc32ad36c437976ec"
+  },
+  "after": {
+    "xv02_benchmark_canonical_v1_0_0.py": "79891c96ccc03ecc8f86bf7174ac83529f7ceeafde628ef43e1abd3c71485dbd",
+    "compound_interference_v1_0_0.py": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c",
+    "xv02_forward_model_v1_0_0.py": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282",
+    "CANONICAL_PROTOCOL_v1_0_0.md": "c699d5689568089db2253c3b527590e906ff008280996e5dc32ad36c437976ec"
+  },
+  "all_unchanged": true
+}

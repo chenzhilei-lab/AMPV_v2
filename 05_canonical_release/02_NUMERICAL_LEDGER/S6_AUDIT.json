@@ -1,0 +1,43 @@
+{
+  "stage": "V2-S6 Native Numerical Ledger Audit",
+  "production": "D:\\Papers\\AMPV_V2\\06_PRODUCTION\\AMPV_V2_NATIVE_PRODUCTION_20261001_234112",
+  "rows": 22500,
+  "matched_scenes": 4500,
+  "ledger_groups": 75,
+  "scene_bad_groups": 0,
+  "seed_namespace": [
+    "AMPV_V2_NATIVE_PRODUCTION_v1_0"
+  ],
+  "production_version": [
+    "AMPV_V2_NATIVE_PRODUCTION_v1_0"
+  ],
+  "method_E_nonexception": "4500/4500",
+  "method_E_diag_complete": "4500/4500",
+  "reconciliation_mismatches": 0,
+  "status": "PASS",
+  "candidate_canonical_eligible": true,
+  "canonical_promoted": false,
+  "canonical_modified": false,
+  "decision": "PROCEED_TO_S7_NATIVE",
+  "checks": {
+    "manifest_status_pass": true,
+    "production_verification_pass": true,
+    "canonical_unchanged": true,
+    "row_count_22500": true,
+    "matched_scenes_4500": true,
+    "ledger_groups_75": true,
+    "methods_A_E": true,
+    "kappa_grid": true,
+    "C_grid": true,
+    "native_namespace_only": true,
+    "native_production_version_only": true,
+    "scene_pairing_zero_bad": true,
+    "crn_same_rn": true,
+    "crn_same_seeds": true,
+    "crn_same_unscaled_structured_rms": true,
+    "contamination_scaling_exact": true,
+    "method_E_nonexception_95pct": true,
+    "method_E_diag_complete_95pct": true,
+    "summary_reconciliation": true
+  }
+}

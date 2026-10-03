@@ -1,0 +1,94 @@
+{
+  "project": "AMPV V2",
+  "stage": "V2-S4",
+  "version": "v1.0",
+  "timestamp": "2026-10-01T00:30:29+08:00",
+  "checks": [
+    {
+      "name": "canonical benchmark",
+      "pass": true,
+      "detail": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\\xv02_benchmark_canonical_v1_0_0.py"
+    },
+    {
+      "name": "canonical interference",
+      "pass": true,
+      "detail": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\\compound_interference_v1_0_0.py"
+    },
+    {
+      "name": "canonical forward",
+      "pass": true,
+      "detail": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\\xv02_forward_model_v1_0_0.py"
+    },
+    {
+      "name": "canonical protocol",
+      "pass": true,
+      "detail": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\\CANONICAL_PROTOCOL_v1_0_0.md"
+    },
+    {
+      "name": "kappa_ref levels",
+      "pass": true,
+      "detail": "[1.0, 2.0, 5.0, 10.0, 20.0]"
+    },
+    {
+      "name": "C levels",
+      "pass": true,
+      "detail": "[0.0, 0.6, 1.0]"
+    },
+    {
+      "name": "N per cell",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "methods A-E",
+      "pass": true,
+      "detail": "['A', 'B', 'C', 'D', 'E']"
+    },
+    {
+      "name": "15 cells",
+      "pass": true,
+      "detail": "15"
+    },
+    {
+      "name": "4500 matched scenes",
+      "pass": true,
+      "detail": "4500"
+    },
+    {
+      "name": "22500 workflow evaluations",
+      "pass": true,
+      "detail": "22500"
+    },
+    {
+      "name": "new production namespace",
+      "pass": true,
+      "detail": "AMPV_PRODUCTION_v1_0"
+    },
+    {
+      "name": "fidelity F0",
+      "pass": true,
+      "detail": "F0"
+    },
+    {
+      "name": "task family",
+      "pass": true,
+      "detail": "COMET_LIKE_PRIMARY"
+    },
+    {
+      "name": "production not authorized",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "server not recommended",
+      "pass": true,
+      "detail": "False"
+    }
+  ],
+  "all_pass": true,
+  "production_authorized": false,
+  "canonical_modified": false,
+  "freeze_dir": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029",
+  "config_sha256": "9a9755d8d6bc9cc51d0c6312853374e339b141c599095cadd8282934e73339b8",
+  "next_step": "Separate S4 authorization stage if all_pass; do not run production from this package."
+}

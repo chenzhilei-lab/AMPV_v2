@@ -1,0 +1,17 @@
+{
+  "stage": "S92-EXP Contaminated Feasibility Smoke",
+  "version": "v1.0",
+  "status": "PASS_TO_PRODUCTION_RUNNER_FREEZE",
+  "rows": 240,
+  "runtime_seconds": 2.762075901031494,
+  "all_structural_checks_pass": true,
+  "smoke_row_sha256": "2fe219cb31735bd0e785ca4c46d10b704ed07887f1ae9aa7ec6e608eb39208b9",
+  "runner_sha256": "2F51E2BA4705A5245C4FE1CDA086B42F73B6717C30F9DF8558ADFF87E81D3334",
+  "base_sha256": "5DADD954B2786168BD5F2D68E7E87279A5FD3A1E45A74F7ED072738C0BD3B5C1",
+  "import_side_effect_detected": true,
+  "scientific_interpretation_authorized": false,
+  "full_production_authorized": false,
+  "canonical_modified": false,
+  "existing_production_rerun": false,
+  "next_stage": "S93 side-effect-free production runner and protocol hash freeze"
+}

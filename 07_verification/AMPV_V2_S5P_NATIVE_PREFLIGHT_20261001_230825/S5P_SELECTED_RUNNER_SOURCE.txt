@@ -1,0 +1,164 @@
+
+from pathlib import Path
+import hashlib, json, re, sys
+from datetime import datetime
+
+ROOT = Path(r"D:\Papers\AMPV_V2")
+AUDIT = ROOT / "09_VERIFICATION"
+
+def sha256(p):
+    h=hashlib.sha256()
+    with open(p,"rb") as f:
+        for c in iter(lambda:f.read(1024*1024),b""):
+            h.update(c)
+    return h.hexdigest()
+
+def latest_snapshot():
+    xs=sorted([p for p in (ROOT/"02_CORE").glob("AMPV_V2_ENGINE_SNAPSHOT_v1_0_*") if p.is_dir()])
+    if not xs:
+        raise FileNotFoundError("No V2-owned engine snapshot found.")
+    return xs[-1]
+
+def candidate_runners():
+    out=[]
+    # Search only plausible source/package locations. Exclude audit/output trees.
+    excluded = {"06_PRODUCTION","07_CANONICAL_OUTPUTS","08_NUMERICAL_LEDGER","09_VERIFICATION","10_FIGURES","11_MANUSCRIPT","12_AUDIT","02_CORE"}
+    for p in ROOT.rglob("*.py"):
+        try:
+            rel=p.relative_to(ROOT)
+        except Exception:
+            continue
+        if rel.parts and rel.parts[0] in excluded:
+            continue
+        txt=p.read_text(encoding="utf-8",errors="replace")
+        score=0
+        needles=[
+            "AMPV V2 S5 PRODUCTION",
+            "AMPV_PRODUCTION_v1_0",
+            "PRODUCTION_ROWS.csv",
+            "kappa_ref_target",
+            "source_gain",
+            "PRODUCTION_VERIFICATION.json",
+        ]
+        for n in needles:
+            if n.lower() in txt.lower():
+                score += 1
+        if score >= 3:
+            out.append((score,p,txt))
+    out.sort(key=lambda x:(-x[0], str(x[1])))
+    return out
+
+def extract_hits(txt):
+    patterns = [
+        "AMPV_PRODUCTION_v1_0",
+        "seed_namespace",
+        "seed_i6",
+        "seed_structured",
+        "default_rng",
+        "RandomState",
+        "np.random",
+        "rng",
+        "lhs",
+        "Latin",
+        "r_n",
+        "sample_id",
+        "1000",
+        "canonical",
+        "JATIS-Done-Backup",
+        "v1.0.0_FINAL",
+        "source_gain",
+        "gain",
+    ]
+    lines=txt.splitlines()
+    hit_idx=[]
+    for i,line in enumerate(lines):
+        low=line.lower()
+        if any(p.lower() in low for p in patterns):
+            hit_idx.append(i)
+    # Merge context windows +-2 lines, cap to keep console readable but complete enough.
+    selected=set()
+    for i in hit_idx:
+        for j in range(max(0,i-2), min(len(lines),i+3)):
+            selected.add(j)
+    chunks=[]
+    last=None
+    for j in sorted(selected):
+        if last is None or j>last+1:
+            chunks.append(["---"])
+        chunks[-1].append(f"{j+1:04d}: {lines[j]}")
+        last=j
+    return [line for ch in chunks for line in ch][:500]
+
+def main():
+    snap=latest_snapshot()
+    runners=candidate_runners()
+
+    ts=datetime.now().strftime("%Y%m%d_%H%M%S")
+    out=AUDIT/f"AMPV_V2_S5P_NATIVE_PREFLIGHT_{ts}"
+    out.mkdir(parents=True,exist_ok=False)
+
+    print("V2 engine snapshot:",snap)
+    print("Snapshot files:",len([p for p in snap.rglob("*") if p.is_file()]))
+    print("Snapshot external source path expected: NO")
+    print()
+
+    if not runners:
+        result={
+            "status":"BLOCKED_NO_S5_RUNNER_FOUND",
+            "snapshot":str(snap),
+            "next_step":"Locate/extract the original S5 production runner package under D:\\Papers\\AMPV_V2 and rerun this preflight."
+        }
+        (out/"S5P_PREFLIGHT.json").write_text(json.dumps(result,indent=2),encoding="utf-8")
+        print("STATUS: BLOCKED_NO_S5_RUNNER_FOUND")
+        print("No Python file with the expected S5 production-runner signatures was found.")
+        print("Audit output:",out)
+        return 7
+
+    best_score,best,txt=runners[0]
+    print("Selected S5 runner:",best)
+    print("Runner SHA256:",sha256(best))
+    print("Runner signature score:",best_score)
+    print("Other candidates:",len(runners)-1)
+    print()
+
+    hits=extract_hits(txt)
+    print("="*100)
+    print("SEED / RNG / ENGINE PATH SOURCE EXCERPTS")
+    print("="*100)
+    for line in hits:
+        print(line)
+    print("="*100)
+
+    external_engine = "JATIS-Done-Backup".lower() in txt.lower() or "01_CANONICAL_PIPELINE".lower() in txt.lower()
+    namespace_present = "AMPV_PRODUCTION_v1_0" in txt
+    seed_logic_terms = [x for x in ["seed_i6","seed_structured","default_rng","np.random","RandomState"] if x.lower() in txt.lower()]
+    result={
+        "stage":"V2-S5P Native Rerun Preflight",
+        "status":"PASS_SOURCE_CAPTURED",
+        "snapshot":str(snap),
+        "selected_runner":str(best),
+        "runner_sha256":sha256(best),
+        "runner_signature_score":best_score,
+        "external_engine_literal_present":external_engine,
+        "old_seed_namespace_present":namespace_present,
+        "seed_logic_terms_present":seed_logic_terms,
+        "source_excerpts":hits,
+        "candidate_runners":[{"score":s,"path":str(p),"sha256":sha256(p)} for s,p,_ in runners[:20]],
+        "next_step":"Use the captured exact source logic to build a V2-native runner. Do not rerun production yet."
+    }
+    (out/"S5P_NATIVE_RERUN_PREFLIGHT.json").write_text(json.dumps(result,indent=2,ensure_ascii=False),encoding="utf-8")
+    (out/"S5P_SELECTED_RUNNER_SOURCE.txt").write_text(txt,encoding="utf-8")
+    print("STATUS: PASS_SOURCE_CAPTURED")
+    print("External old-engine literal present:",external_engine)
+    print("Old seed namespace present:",namespace_present)
+    print("Seed/RNG terms present:",seed_logic_terms)
+    print("Audit output:",out)
+    print("NEXT: Send the full console output back. Do NOT rerun production yet.")
+    return 0
+
+if __name__=="__main__":
+    try:
+        sys.exit(main())
+    except Exception as e:
+        print("FATAL:",repr(e))
+        sys.exit(2)

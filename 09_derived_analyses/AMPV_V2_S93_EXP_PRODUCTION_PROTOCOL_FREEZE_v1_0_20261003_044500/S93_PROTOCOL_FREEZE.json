@@ -1,0 +1,35 @@
+{
+  "stage": "S93-EXP Production Protocol Freeze",
+  "version": "v1.0",
+  "status": "PASS_PRODUCTION_AUTHORIZED",
+  "user_authorization": true,
+  "task_family": "COMPACT_PSF_PRIMARY",
+  "N_base": 300,
+  "condition_cells_per_sample": 15,
+  "workflows": [
+    "A",
+    "B",
+    "C",
+    "E"
+  ],
+  "expected_rows": 18000,
+  "kappa_ref": [
+    1,
+    2,
+    5,
+    10,
+    20
+  ],
+  "C": [
+    0.0,
+    0.6,
+    1.0
+  ],
+  "lhs_seed": 20261003,
+  "analysis_seed": 20261004,
+  "core_sha256": "B55562056BDC6AEBF47E4540F1A9E517280E9A4A6551B265DB7EB994DDD182A7",
+  "runner_sha256": "5414E62C3C8366374E2EB9A19029C51277A791060C13B0E0E1E3305AD01A8875",
+  "pure_import_pass": true,
+  "original_canonical_modified": false,
+  "original_production_rerun": false
+}

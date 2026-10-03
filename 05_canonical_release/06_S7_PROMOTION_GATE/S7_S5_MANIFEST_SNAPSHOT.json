@@ -1,0 +1,39 @@
+{
+  "project": "AMPV V2",
+  "stage": "V2-S5 Production",
+  "version": "v1.0",
+  "status": "PASS",
+  "started_at": "2026-10-01T23:41:12+08:00",
+  "authorization_dir": "D:\\Papers\\AMPV_V2\\05_PILOT\\S4_AUTHORIZATION\\S4_PRODUCTION_AUTHORIZATION_NATIVE_20261001_233019",
+  "authorization_sha256": "efe785c666bc7ac7761d01c9d2e79df6f2903e25624ddaffa9ec22ef3be82fbb",
+  "freeze_dir": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4N_NATIVE_GRID_FREEZE_20261001_233019",
+  "freeze_config_sha256": "5f5406b1c094765f80b6603aac690ad789f35f778519bb7105d4d85d14c45f98",
+  "output_dir": "D:\\Papers\\AMPV_V2\\06_PRODUCTION\\AMPV_V2_NATIVE_PRODUCTION_20261001_234112",
+  "canonical_hashes_before": {
+    "xv02_benchmark_canonical_v1_0_0.py": "79891c96ccc03ecc8f86bf7174ac83529f7ceeafde628ef43e1abd3c71485dbd",
+    "compound_interference_v1_0_0.py": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c",
+    "xv02_forward_model_v1_0_0.py": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282",
+    "CANONICAL_PROTOCOL_v1_0_0.md": "c699d5689568089db2253c3b527590e906ff008280996e5dc32ad36c437976ec"
+  },
+  "production_authorized": true,
+  "server_used": false,
+  "finished_at": "2026-10-01T23:50:45+08:00",
+  "canonical_hashes_after": {
+    "xv02_benchmark_canonical_v1_0_0.py": "79891c96ccc03ecc8f86bf7174ac83529f7ceeafde628ef43e1abd3c71485dbd",
+    "compound_interference_v1_0_0.py": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c",
+    "xv02_forward_model_v1_0_0.py": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282",
+    "CANONICAL_PROTOCOL_v1_0_0.md": "c699d5689568089db2253c3b527590e906ff008280996e5dc32ad36c437976ec"
+  },
+  "canonical_unchanged": true,
+  "expected_rows": 22500,
+  "actual_rows": 22500,
+  "verification_pass": true,
+  "runtime_report": {
+    "matched_scenes": 4500,
+    "median_sec_per_scene": 0.11712129999068566,
+    "p95_sec_per_scene": 0.13673189504479527,
+    "total_runtime_sec_scene_loop": 538.5763422005111,
+    "total_runtime_min_scene_loop": 8.97627237000852,
+    "server_recommended_12h_rule": false
+  }
+}

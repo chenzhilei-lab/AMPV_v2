@@ -1,0 +1,7 @@
+﻿figure,source,visual_status,finding,action
+Figure 1 v1.0,F:\AMPV_V2\10_FIGURES\AMPV_V2_S32_FRAMEWORK_FIGURE_20261002_180935\figures_png\FIGURE_1_AMPV_FRAMEWORK.png,FAIL_SUPERSEDED,Multiple title/body strings overflowed box boundaries in manuscript-scale rendering.,Superseded by Figure 1 v1.1.
+Figure 1 v1.1,F:\AMPV_V2\10_FIGURES\AMPV_V2_S32_FRAMEWORK_FIGURE_v1_1_20261002_182239\figures_png\FIGURE_1_AMPV_FRAMEWORK_v1_1.png,PASS,Box titles/body fit; arrows and labels are legible; no visible overlap.,Use v1.1.
+Figure 2,F:\AMPV_V2\10_FIGURES\AMPV_V2_S31_FINAL_FIGURE_CONSOLIDATION_20261002_180847\figures_png\FIGURE_2_MEDIAN_ABS_ERROR_LANDSCAPE.png,PASS,Three-panel layout legible; legends and axes readable; no clipping observed.,Use full-width manuscript placement.
+Figure 3,F:\AMPV_V2\10_FIGURES\AMPV_V2_S31_FINAL_FIGURE_CONSOLIDATION_20261002_180847\figures_png\FIGURE_3_VULNERABILITY_LANDSCAPE.png,PASS,Three-panel layout legible; legends and axes readable; no clipping observed.,Use full-width manuscript placement.
+Figure 4,F:\AMPV_V2\10_FIGURES\AMPV_V2_S31_FINAL_FIGURE_CONSOLIDATION_20261002_180847\figures_png\FIGURE_4_GLOBAL_CONTEXT.png,PASS,Two-panel global-context summary is clear and unclipped.,Use as pooled descriptive context only.
+Figure S1,F:\AMPV_V2\10_FIGURES\AMPV_V2_S31_FINAL_FIGURE_CONSOLIDATION_20261002_180847\figures_png\FIGURE_S1_SIGNED_ERROR.png,PASS,Three-panel signed-error figure is legible; zero line visible; no clipping observed.,Use supplementary/full-width placement.

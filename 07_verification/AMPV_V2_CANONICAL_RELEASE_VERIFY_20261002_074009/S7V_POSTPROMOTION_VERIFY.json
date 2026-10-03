@@ -1,0 +1,18 @@
+{
+  "stage": "S7V Post-promotion Verification",
+  "release": "D:\\Papers\\AMPV_V2\\07_CANONICAL_OUTPUTS\\AMPV_V2_CANONICAL_RELEASE_20261002_074007",
+  "status": "PASS",
+  "canonical_release_verified": true,
+  "hash_mismatches": [],
+  "checks": {
+    "release_manifest_promoted": true,
+    "hash_manifest_all_pass": true,
+    "rows_22500": true,
+    "matched_scenes_4500": true,
+    "s6_status_pass": true,
+    "s6_candidate_eligible": true,
+    "production_hash_matches_release_manifest": true,
+    "ledger_hash_matches_release_manifest": true
+  },
+  "next_step": "Proceed to S8 manuscript-source export."
+}

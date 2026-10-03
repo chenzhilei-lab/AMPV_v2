@@ -1,0 +1,9 @@
+{
+  "stage": "S32 AMPV Framework Figure v1.1",
+  "supersedes": "S32 v1.0",
+  "reason": "Visual QA found text overflow in multiple v1.0 boxes.",
+  "figure1_created": true,
+  "scientific_values_changed": false,
+  "canonical_modified": false,
+  "status": "PASS"
+}

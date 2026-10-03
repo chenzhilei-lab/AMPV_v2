@@ -1,0 +1,178 @@
+{
+  "project": "AMPV V2",
+  "stage": "V2-S4 Production Authorization",
+  "version": "v1.0",
+  "timestamp": "2026-10-01T00:34:35+08:00",
+  "status": "AUTHORIZED",
+  "production_authorized": true,
+  "canonical_modified": false,
+  "freeze_dir": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029",
+  "freeze_config_sha256": "9a9755d8d6bc9cc51d0c6312853374e339b141c599095cadd8282934e73339b8",
+  "canonical_hashes_at_authorization": {
+    "xv02_benchmark_canonical_v1_0_0.py": "79891c96ccc03ecc8f86bf7174ac83529f7ceeafde628ef43e1abd3c71485dbd",
+    "compound_interference_v1_0_0.py": "9185c95d799b4d2fb28d0d3063fbebac8d112dd92ff6d8d18ea013cafabb172c",
+    "xv02_forward_model_v1_0_0.py": "5bb07a103d25ad61a4ee1ea854f6a8f61ea6990dfd400e073d21584854a41282",
+    "CANONICAL_PROTOCOL_v1_0_0.md": "c699d5689568089db2253c3b527590e906ff008280996e5dc32ad36c437976ec"
+  },
+  "grid": {
+    "kappa_ref_levels": [
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      20.0
+    ],
+    "contamination_levels": [
+      0.0,
+      0.6,
+      1.0
+    ],
+    "N_per_cell": 300,
+    "methods": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "cells": 15,
+    "matched_scenes": 4500,
+    "workflow_evaluations": 22500
+  },
+  "seed_policy": {
+    "master_seed": 20260930,
+    "production_version": "AMPV_PRODUCTION_v1_0",
+    "fidelity": "F0",
+    "task_family": "COMET_LIKE_PRIMARY",
+    "seed_namespace": "AMPV_PRODUCTION_v1_0"
+  },
+  "production_output_root": "D:\\Papers\\AMPV_V2\\06_PRODUCTION",
+  "checks": [
+    {
+      "name": "freeze config exists",
+      "pass": true,
+      "detail": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029\\S4_PRODUCTION_GRID_v1_0.json"
+    },
+    {
+      "name": "freeze audit exists",
+      "pass": true,
+      "detail": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029\\S4_FREEZE_AUDIT.json"
+    },
+    {
+      "name": "freeze manifest exists",
+      "pass": true,
+      "detail": "D:\\Papers\\AMPV_V2\\04_EXPERIMENTS\\S4_GRID_FREEZE_20261001_003029\\SHA256SUMS.txt"
+    },
+    {
+      "name": "freeze audit all_pass",
+      "pass": true,
+      "detail": "True"
+    },
+    {
+      "name": "freeze production unauthorized",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "config production unauthorized",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "freeze SHA256 manifest integrity",
+      "pass": true,
+      "detail": "S4_FREEZE_AUDIT.json=OK; S4_GRID_RATIONALE_v1_0.md=OK; S4_PREPRODUCTION_GATE.md=OK; S4_PRODUCTION_GRID_v1_0.json=OK"
+    },
+    {
+      "name": "grid frozen kappa",
+      "pass": true,
+      "detail": "[1.0, 2.0, 5.0, 10.0, 20.0]"
+    },
+    {
+      "name": "grid frozen contamination",
+      "pass": true,
+      "detail": "[0.0, 0.6, 1.0]"
+    },
+    {
+      "name": "N=300",
+      "pass": true,
+      "detail": "300"
+    },
+    {
+      "name": "methods A-E",
+      "pass": true,
+      "detail": "['A', 'B', 'C', 'D', 'E']"
+    },
+    {
+      "name": "15 cells",
+      "pass": true,
+      "detail": "15"
+    },
+    {
+      "name": "4500 scenes",
+      "pass": true,
+      "detail": "4500"
+    },
+    {
+      "name": "22500 evals",
+      "pass": true,
+      "detail": "22500"
+    },
+    {
+      "name": "production namespace",
+      "pass": true,
+      "detail": "AMPV_PRODUCTION_v1_0"
+    },
+    {
+      "name": "fidelity F0",
+      "pass": true,
+      "detail": "F0"
+    },
+    {
+      "name": "task family",
+      "pass": true,
+      "detail": "COMET_LIKE_PRIMARY"
+    },
+    {
+      "name": "canonical exists xv02_benchmark_canonical_v1_0_0.py",
+      "pass": true,
+      "detail": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\\xv02_benchmark_canonical_v1_0_0.py"
+    },
+    {
+      "name": "canonical exists compound_interference_v1_0_0.py",
+      "pass": true,
+      "detail": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\\compound_interference_v1_0_0.py"
+    },
+    {
+      "name": "canonical exists xv02_forward_model_v1_0_0.py",
+      "pass": true,
+      "detail": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\\xv02_forward_model_v1_0_0.py"
+    },
+    {
+      "name": "canonical exists CANONICAL_PROTOCOL_v1_0_0.md",
+      "pass": true,
+      "detail": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL\\CANONICAL_PROTOCOL_v1_0_0.md"
+    },
+    {
+      "name": "production output root",
+      "pass": true,
+      "detail": "D:\\Papers\\AMPV_V2\\06_PRODUCTION"
+    },
+    {
+      "name": "free disk >= 2 GB",
+      "pass": true,
+      "detail": "37.69 GB"
+    },
+    {
+      "name": "live worklog exists",
+      "pass": true,
+      "detail": "AMPV_V2_WORKLOG_LIVE_20261001_003029.md"
+    },
+    {
+      "name": "live eventlog exists",
+      "pass": true,
+      "detail": "AMPV_V2_EVENT_LOG_LIVE_20261001_003029.jsonl"
+    }
+  ],
+  "next_step": "Build and run a separate production runner that consumes this exact authorization artifact."
+}

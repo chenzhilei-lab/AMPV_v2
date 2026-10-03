@@ -1,0 +1,9 @@
+{
+  "snapshot_created": "2026-10-01T23:01:25",
+  "source_engine": "D:\\Papers\\JATIS-Done-Backup\\CLEAN_MASTER_20260927_073905\\01_CANONICAL_PIPELINE\\v1.0.0_FINAL",
+  "source_file_count": 9,
+  "scientific_logic_modified_during_freeze": false,
+  "copy_method": "shutil.copytree + copy2",
+  "source_inventory_sha256": "56863d9533bc34d6f9e8166b97741b81d95f345a78dab7c08b87779f1f46a264",
+  "note": "This V2-owned snapshot is a provenance-preserving code copy. It does not include or authorize reuse of CAPS V1 production results."
+}

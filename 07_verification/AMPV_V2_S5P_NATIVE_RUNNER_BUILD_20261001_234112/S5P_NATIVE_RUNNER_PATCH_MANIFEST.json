@@ -1,0 +1,29 @@
+{
+  "stage": "V2-S5P Native Production Runner Build",
+  "source_runner": "D:\\Papers\\AMPV_V2\\AMPV_V2_S5_PRODUCTION_RUNNER_v1_0\\scripts\\run_AMPV_V2_production_v1_0.py",
+  "source_runner_sha256": "22790d10a4d3c5832903c5805ec2a82bd189226206eede3d37ddb69d69c98fec",
+  "patched_runner": "D:\\Papers\\AMPV_V2\\03_WORKFLOWS\\S5P_NATIVE_RUNNER\\AMPV_V2_NATIVE_RUNNER_20261001_234112\\run_AMPV_V2_native_production_v1_0.py",
+  "patched_runner_sha256": "628f4454a6b8fa9d8152391eff6002f0054b42acf16548f34a5c9e27acec6483",
+  "engine_snapshot": "D:\\Papers\\AMPV_V2\\02_CORE\\AMPV_V2_ENGINE_SNAPSHOT_v1_0_20261001_230125",
+  "native_authorization": "D:\\Papers\\AMPV_V2\\05_PILOT\\S4_AUTHORIZATION\\S4_PRODUCTION_AUTHORIZATION_NATIVE_20261001_233019\\S4_PRODUCTION_AUTHORIZATION.json",
+  "native_authorization_sha256": "efe785c666bc7ac7761d01c9d2e79df6f2903e25624ddaffa9ec22ef3be82fbb",
+  "new_seed_namespace": "AMPV_V2_NATIVE_PRODUCTION_v1_0",
+  "new_master_seed": 20261001,
+  "new_rn_seed": 20261001,
+  "patch_counts": {
+    "engine_root": 1,
+    "native_authorization_glob": 1,
+    "seed_namespace_gate": 1,
+    "production_version": 1,
+    "output_prefix_all": 1
+  },
+  "scientific_grid_changed": false,
+  "scientific_method_code_changed": false,
+  "changes_limited_to": [
+    "engine path ownership",
+    "authorization selection",
+    "seed namespace gate",
+    "production identity/output prefix"
+  ],
+  "status": "PATCHED_AND_STATICALLY_VERIFIED"
+}

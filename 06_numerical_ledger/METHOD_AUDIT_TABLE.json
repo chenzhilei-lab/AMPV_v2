@@ -1,0 +1,42 @@
+[
+  {
+    "workflow_id": "A",
+    "rows": 4500,
+    "valid": 4500,
+    "vulnerable": 247,
+    "median_runtime_sec": 0.00024070002837106586,
+    "p95_runtime_sec": 0.0003485249791992829
+  },
+  {
+    "workflow_id": "B",
+    "rows": 4500,
+    "valid": 4500,
+    "vulnerable": 218,
+    "median_runtime_sec": 0.0030878499965183437,
+    "p95_runtime_sec": 0.003945670009125025
+  },
+  {
+    "workflow_id": "C",
+    "rows": 4500,
+    "valid": 4500,
+    "vulnerable": 689,
+    "median_runtime_sec": 0.018012900021858513,
+    "p95_runtime_sec": 0.02174714498687536
+  },
+  {
+    "workflow_id": "D",
+    "rows": 4500,
+    "valid": 4500,
+    "vulnerable": 225,
+    "median_runtime_sec": 0.0007392999832518399,
+    "p95_runtime_sec": 0.000987325009191409
+  },
+  {
+    "workflow_id": "E",
+    "rows": 4500,
+    "valid": 4500,
+    "vulnerable": 80,
+    "median_runtime_sec": 0.00891780000529252,
+    "p95_runtime_sec": 0.012281614972744142
+  }
+]

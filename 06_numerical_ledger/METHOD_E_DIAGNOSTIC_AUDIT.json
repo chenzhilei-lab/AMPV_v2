@@ -1,0 +1,13 @@
+{
+  "rows": 4500,
+  "nonexception": 4500,
+  "diagnostic_complete": 4500,
+  "status_counts": {
+    "2": 4497,
+    "0": 3
+  },
+  "success_counts": {
+    "True": 4497,
+    "False": 3
+  }
+}

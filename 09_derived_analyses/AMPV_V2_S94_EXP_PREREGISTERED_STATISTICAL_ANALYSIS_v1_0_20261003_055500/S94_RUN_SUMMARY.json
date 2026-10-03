@@ -1,0 +1,22 @@
+{
+  "stage": "S94-EXP",
+  "source_sha256": "44feafab2c14a86a51647103800e7e4c988ca15b136e88911df00bfd168dc948",
+  "bootstrap_B": 2000,
+  "analysis_seed": 20261004,
+  "rows": 18000,
+  "sample_ids": 300,
+  "cell_groups": 60,
+  "workflow_paired_contrasts": 90,
+  "contamination_contrasts": 40,
+  "adjacent_kappa_contrasts": 48,
+  "tau_cells": 360,
+  "contamination_ci_positive": 40,
+  "contamination_ci_negative": 0,
+  "contamination_ci_zero": 0,
+  "adjacent_kappa_ci_negative": 32,
+  "adjacent_kappa_ci_positive": 0,
+  "adjacent_kappa_ci_zero": 16,
+  "workflow_pair_ci_positive": 30,
+  "workflow_pair_ci_negative": 20,
+  "workflow_pair_ci_zero": 40
+}
