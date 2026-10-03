@@ -15,7 +15,7 @@
 \linenumbers
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\title{Reproducible methodology for stress-testing astronomical photometric workflows under compound contamination}
+\title{AMPV: Reproducible reliability mapping of astronomical photometric workflows under compound contamination}
 \author{Zhilei Chen\\Guangdong Peizheng College\\ORCID: 0009-0000-2798-9566}
 
 
@@ -25,7 +25,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-AMPV is a reproducible validation methodology for mapping the reliability of astronomical photometric workflows under controlled compound contamination. The primary comet-like experiment evaluates workflows A--E on five reference-contrast levels and three contamination levels, using 300 matched stochastic identities to form 4,500 condition-specific scenes and 22,500 workflow evaluations. A pre-specified extension, internally frozen before outcome generation, evaluates a materially different compact-PSF task family with 300 identities and 18,000 evaluations of blind workflows A, B, C, and E. Performance is summarized with signed and absolute relative error and a predefined vulnerability indicator at $|e|>0.5$, with sample-identity bootstrap uncertainty and threshold sensitivity. In the comet-like family, all 60 adjacent-reference-contrast paired comparisons showed lower absolute error at the next tested contrast level, whereas contamination effects were not uniform across workflow--contrast cells. In contaminated compact-PSF cells, all 32 adjacent-reference-contrast comparisons showed the same improving direction, while all 40 tested contamination contrasts were adverse. Workflow-relative behavior and vulnerability boundaries differed between the two families; the compact-PSF advantage of Gaussian model fitting is interpreted as a task-specific model-match effect rather than universal superiority. The two controlled synthetic families therefore support AMPV as a method for recovering task-conditional, cell-resolved reliability structure rather than assigning a global workflow ranking. The study remains single-fidelity and synthetic, so the reported boundaries are restricted to the tested validation domains and do not constitute observational validation.
+Aggregate benchmark scores can conceal where an astronomical measurement workflow becomes unreliable as observing conditions change. AMPV is a reusable experimental-design template for retaining that conditional structure: matched stochastic identities are propagated across explicit stress coordinates, workflow information classes are kept distinct, and continuous error and operational vulnerability are reported cell by cell rather than collapsed into a global ranking. The primary comet-like experiment evaluates workflows A--E on five reference-contrast levels and three contamination levels, using 300 matched identities to form 4,500 condition-specific scenes and 22,500 workflow evaluations. A separately frozen compact-PSF extension uses 300 identities and 18,000 evaluations of blind workflows A, B, C, and E. In the comet-like family, all 60 adjacent-reference-contrast paired comparisons had 95\% bootstrap intervals below zero for the change in absolute error, whereas contamination effects were not uniform. In contaminated compact-PSF cells, all 32 adjacent-reference-contrast intervals were below zero and all 40 contamination contrasts were adverse. A further pre-outcome-frozen transfer test applied the same design logic to SEP 1.4.1 photometry outside the A--E measurement implementation: across 100 matched identities and 900 measurements, all six contamination-versus-clean contrasts were interval-supported as adverse and all four contaminated-domain reference-contrast comparisons were interval-supported as improving with higher tested contrast. Workflow-relative behavior and vulnerability boundaries differed between the two controlled task families. These results show the value of preserving matched, cell-resolved validation structure and demonstrate implementation transfer without implying a task-independent workflow ordering. The study remains single-fidelity and synthetic; the reported boundaries are restricted to the tested domains and do not constitute observational validation.
 \end{abstract}
 \keywords{astronomical photometry, validation, synthetic perturbations, robustness, reliability mapping, reproducibility}
 {\noindent \footnotesize\textbf{*}Corresponding author: Zhilei Chen, \linkable{2604513@peizheng.edu.cn}}
@@ -37,20 +37,13 @@ AMPV is a reproducible validation methodology for mapping the reliability of ast
 The author declares no competing interests.
 
 \section*{Code, Data, and Materials Availability}
-\textbf{EXTERNAL ACTION REQUIRED.} A permanent AMPV V2 repository record, public record URL, and DOI or other persistent identifier have not yet been assigned. The local reproducibility archive candidate is not a substitute for the final public Data/Code availability statement. Materials availability is expected to be not applicable to this computational study, subject to author confirmation.
+The AMPV V2 code, frozen computational outputs, numerical ledgers, verification records, figures, derived analyses, and supplementary reproducibility materials are available at \texttt{https://github.com/chenzhilei-lab/AMPV\_v2}. No separate physical materials are associated with this computational study.
 
 \section*{Acknowledgments}
 This research received no external funding.
 
-During the preparation of this work, the author used OpenAI ChatGPT for English-language editing, manuscript organization, and reference-formatting tasks. It also provided technical assistance for parts of Python code development, review, testing, and reproducibility-audit workflows within the AMPV study. All scientific results were derived from frozen, version-controlled computational outputs and were not AI-generated. Key numerical values were independently verified through reproduction runs and reverse numerical-provenance audits. Figures, tables, statistical outputs, references, and manuscript conclusions were cross-checked against the corresponding frozen records. All decisions regarding study design, methodological choices, scientific interpretation, and manuscript submission were made by the author. The author reviewed the final code and manuscript and takes full responsibility for the accuracy, integrity, and content of the work.
-
 \section*{Author Contributions}
-\textbf{AUTHOR INPUT REQUIRED.} Assign CRediT contributor roles to every listed author before submission.
-
-\section*{Originality and Submission Status}
-\textbf{AUTHOR CONFIRMATION REQUIRED.} Confirm that AMPV V2 is original work and is not under concurrent journal consideration. Confirm separately whether AMPV V2 itself has previously been submitted to or declined by an SPIE journal.
-
-CAPS V1 is related prior work, but AMPV V2 is a distinct validation-methodology manuscript with independently realized V2 canonical production; CAPS V1 production outputs are not used as canonical evidence for the present AMPV V2 results. Related CAPS V1 archive DOI: 10.5281/zenodo.22996331.
+Zhilei Chen: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Visualization, Writing -- original draft, Writing -- review \& editing.
 
 \begin{thebibliography}{99}
 \bibitem{ref1} M. Annunziatella, A. Mercurio, M. Brescia, S. Cavuoti, and G. Longo, "Inside Catalogs: A Comparison of Source Extraction Software," \textit{Publications of the Astronomical Society of the Pacific} \textbf{125}(923), 68--82 (2013). [doi:10.1086/669333].
@@ -63,8 +56,11 @@ CAPS V1 is related prior work, but AMPV V2 is a distinct validation-methodology 
 \bibitem{ref8} B. T. P. Rowe et al., "GalSim: The modular galaxy image simulation toolkit," \textit{Astronomy and Computing} \textbf{10}, 121--150 (2015). [doi:10.1016/j.ascom.2015.02.002].
 \bibitem{ref9} S. Everett et al., "Dark Energy Survey Year 3 Results: Measuring the Survey Transfer Function with Balrog," \textit{The Astrophysical Journal Supplement Series} \textbf{258}, 15 (2022). [doi:10.3847/1538-4365/ac26c1].
 \bibitem{ref10} I. Mendoza et al., "The Blending ToolKit: A simulation framework for evaluation of galaxy detection and deblending," \textit{The Open Journal of Astrophysics} \textbf{8} (2025). [doi:10.33232/001c.129699].
+\bibitem{ref11} K. Barbary, "SEP: Source Extractor as a library," \textit{Journal of Open Source Software} \textbf{1}(6), 58 (2016). [doi:10.21105/joss.00058].
 \end{thebibliography}
 \end{spacing}
 \end{document}
+
+
 
 

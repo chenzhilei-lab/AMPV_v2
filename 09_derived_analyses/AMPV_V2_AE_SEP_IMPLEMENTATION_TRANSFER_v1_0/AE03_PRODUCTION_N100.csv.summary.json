@@ -1,0 +1,9 @@
+{
+  "rows": 900,
+  "sample_ids": 100,
+  "expected_rows": 900,
+  "all_finite": true,
+  "nonzero_flags": 0,
+  "sep_version": "1.4.1",
+  "numpy_version": "2.5.3"
+}

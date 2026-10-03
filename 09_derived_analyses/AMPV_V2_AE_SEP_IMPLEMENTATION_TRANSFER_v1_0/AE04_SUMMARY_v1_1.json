@@ -1,0 +1,10 @@
+{
+  "B": 2000,
+  "seed": 20261004,
+  "cells": 9,
+  "contamination_contrasts": 6,
+  "contamination_ci_above_zero": 6,
+  "kappa_contrasts": 6,
+  "kappa_ci_below_zero": 4,
+  "input_sha256": "1e098caecdc6f1369688425637f48efcdb3699a5f2648aa430aa66b5b0db2895"
+}

@@ -2,9 +2,13 @@
 
 \subsection{Motivation}\label{motivation}
 
-A single aggregate performance summary cannot by itself show where a
-workflow remains reliable or where it fails across controlled changes in
-observational difficulty.
+Validation based mainly on a pooled score or global workflow ordering can
+hide the conditions under which an astronomical measurement pipeline
+changes from stable to vulnerable. The methodological problem addressed
+here is therefore not simply how to compare workflows, but how to retain
+the stress-coordinate, matched-scene, and information-class structure
+needed to identify where a performance conclusion holds and where it
+ceases to hold.
 
 Astronomical photometry and source-extraction workflows have been
 evaluated with controlled simulations, injected sources, and
@@ -37,19 +41,44 @@ survey transfer function \cite{ref9}. For task-specific algorithm
 evaluation, the Blending ToolKit combines simulated blended-galaxy
 images, standardized algorithm interfaces, and common metrics to support
 principled comparisons of detection and deblending methods \cite{ref10}.
-AMPV is positioned alongside, rather than prior to, these approaches.
-Its emphasis in the present study is a matched compound-contamination
-stress grid with preserved stochastic identities, explicit separation of
-blind and privileged-information workflow classes, and cell-resolved
-reliability and operational-vulnerability surfaces used to report
-boundaries only on the tested grid.
+Taken together, these precedents establish the value of controlled
+simulation, source injection, survey-level validation, and standardized
+algorithm comparison. The complementary question pursued here is how to
+structure a comparative validation experiment when the desired output is
+not only a pooled performance summary but the tested region in which a
+workflow-level conclusion remains supported. AMPV is positioned
+alongside, rather than prior to, these approaches. The specific
+methodological gap addressed here is the loss of stress-coordinate,
+matched-scene, and information-class structure when validation is
+reduced to pooled performance summaries.
+
+Common-random-number designs, paired comparisons, bootstrap uncertainty,
+and domain-bounded validation are established ideas \cite{ref6,ref7}.
+AMPV does not claim these individual ingredients as new. It provides a
+reusable experimental-design template that combines them for astronomical
+workflow validation while retaining five relations in one analysis: the
+matched stochastic scene, the changed stress coordinate, the workflow
+information class, the cell-resolved continuous error, and the state of
+an operational vulnerability rule.
+
+In the present implementation, those relations are retained through a
+matched compound-contamination stress grid with preserved stochastic
+identities, explicit separation of blind and privileged-information
+workflow classes, and cell-resolved continuous-error and
+operational-vulnerability surfaces. Its intended output is therefore a
+tested reliability domain with explicit boundaries, not a task-independent
+workflow ranking. The later SEP transfer experiment tests whether this
+design logic remains informative when the measurement endpoint is moved
+outside the internal A--E implementation.
 
 The present experiment uses a controlled synthetic environment so that
 ground truth, perturbation strength, and repeated scene realization can
 be fixed explicitly. \cite{ref5} This makes it possible to separate
 changes in workflow output from changes in the underlying stochastic
-realization and to preserve a reproducible audit trail from scene
-generation through numerical summary.
+realization. Reproducible provenance is retained as a supporting control;
+the scientific test is whether preserving this matched structure exposes
+reliability boundaries and workflow-relative changes that a pooled
+summary does not retain.
 
 \subsection{From aggregate comparison to reliability
 mapping}\label{from-aggregate-comparison-to-reliability-mapping}
@@ -57,10 +86,10 @@ mapping}\label{from-aggregate-comparison-to-reliability-mapping}
 AMPV is framed here as a validation methodology rather than as an
 additional photometric estimator. The objects being evaluated are
 workflows A--E; AMPV supplies the experimental design, matched-scene
-structure, numerical ledger, and boundary-oriented interpretation used
+structure, and boundary-oriented interpretation used
 to assess them.
 
-The frozen V2 design crosses five reference-contrast levels with three
+The V2 design crosses five reference-contrast levels with three
 contamination levels and evaluates every workflow on the same matched
 scenes. This structure supports two complementary views of performance:
 continuous error behavior and a threshold-based vulnerability indicator.
@@ -71,13 +100,12 @@ depend on the tested stress coordinates.
 \subsection{Relationship to CAPS}\label{relationship-to-caps}
 
 AMPV and CAPS serve different roles in the present work. AMPV is the
-general validation methodology used to organize stress testing,
+validation methodology used here to organize stress testing,
 reliability mapping, and boundary analysis. CAPS is a controlled
 synthetic implementation environment that can support such experiments.
-The V2 production used in this manuscript was independently realized,
-audited, and canonically frozen within the AMPV V2 project tree; the
-earlier CAPS V1 production outputs are not used as the canonical
-evidence for the present results.
+The V2 production used in this manuscript was independently implemented
+within the AMPV V2 project; earlier CAPS V1 production outputs are not
+used in the present analysis.
 
 This distinction is important because the scientific contribution of the
 present study is not a renamed workflow or a simple continuation of an
@@ -86,15 +114,15 @@ for characterizing reliability across controlled perturbation space.
 
 \subsection{Study objectives}\label{study-objectives}
 
-The present study has four objectives:
+The present study has five objectives:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  to define and execute a frozen matched-scene stress grid over
+  to define and execute a matched-scene stress grid over
   reference contrast and contamination level for workflows A--E in the
-  primary comet-like family, with a separately frozen blind-workflow
+  primary comet-like family, with a separately versioned blind-workflow
   A/B/C/E extension in the compact-PSF family;
 \item
   to quantify both continuous error behavior and threshold-defined
@@ -105,44 +133,55 @@ The present study has four objectives:
   workflow information-class distinctions, including the diagnostic role
   of privileged-information workflow D; and
 \item
-  to establish a fully traceable production-to-ledger-to-canonical
-  workflow so that every manuscript number can be linked back to frozen
-  V2-native evidence.
+  to maintain a reproducible analysis chain linking reported numerical
+  results to the corresponding V2 production outputs; and
+\item
+  to test implementation transfer by applying the same matched
+  reliability-mapping logic to an independently implemented SEP
+  photometry endpoint under a separately frozen compact-PSF subset.
 \end{enumerate}
 
-The present study is single-fidelity but now contains two separately
-versioned controlled synthetic task families. The canonical
-\texttt{COMET\_LIKE\_PRIMARY} experiment is retained unchanged, and a
-pre-registered \texttt{COMPACT\_PSF\_PRIMARY} extension tests whether
-the AMPV reliability-mapping structure remains informative after a
-material change in source morphology and estimand. Multi-fidelity
-dependence remains outside the evidence supported by the current study.
+The present study is single-fidelity and contains two separately
+versioned controlled synthetic task families. The primary comet-like
+experiment is retained unchanged. A compact-PSF extension specified and frozen before outcome generation tests whether the AMPV reliability-
+mapping structure remains informative after a material change in source
+morphology and estimand. A later, separately frozen SEP transfer test
+addresses implementation dependence without changing the underlying
+synthetic task family. Multi-fidelity and observational dependence remain
+outside the evidence supported by the current study.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.88\linewidth]{figures/FIGURE_1_AMPV_FRAMEWORK.pdf}
-\caption{AMPV validation framework.}
+\caption{AMPV validation framework. Matched stochastic identities are propagated across explicit stress coordinates while workflow information classes are retained; cell-resolved continuous error and an optional operational vulnerability rule define the reported reliability landscape.}
 \label{fig:framework}
 \end{figure}
 \subsection{Scope of external context}\label{scope-of-external-context}
 
-External context is limited to source-level-audited literature.
+External context is limited to the literature cited here.
 Prior-art statements are restricted to controlled simulation and source
 injection, photometric validation, source-extraction comparison,
 common-random-number methodology, and validation-domain framing
 supported by Refs.
-\cite{ref1,ref2,ref3,ref4,ref5,ref6,ref7,ref8,ref9,ref10}. Claims about
-the present AMPV results remain grounded in the frozen V2 evidence
-chain.
+\cite{ref1,ref2,ref3,ref4,ref5,ref6,ref7,ref8,ref9,ref10,ref11}. Claims about
+the present AMPV results remain grounded in the versioned V2 analysis
+outputs.
 
 \section{Methods}\label{methods}
 
 \subsection{AMPV validation design and statistical
 unit}\label{ampv-validation-design-and-statistical-unit}
 
-AMPV is used here to map workflow reliability under controlled compound
-contamination. The experiment contains 300 base stochastic sample
-identities. Each identity is propagated through 15 condition cells
+AMPV separates the validation design from the particular photometric
+workflows being tested. In this study the design consists of (i) a
+truth-known task family, (ii) explicit stress coordinates, (iii)
+stochastic identities preserved across those coordinates, (iv)
+workflow information classes, (v) a continuous error measure, and (vi)
+an optional operational vulnerability rule. The specific source model,
+stress variables, and workflows can therefore change between validation
+tasks without changing this design logic. The first controlled
+implementation maps workflow reliability under compound contamination
+and contains 300 base stochastic sample identities. Each identity is propagated through 15 condition cells
 formed by five reference-contrast levels,
 \(\kappa_{\rm ref}=1,2,5,10,20\), crossed with three contamination
 levels, \(C=0,0.6,1.0\). This produces 4,500 condition-specific scene
@@ -150,6 +189,8 @@ instances. Each scene instance is evaluated by workflows A--E, giving
 22,500 workflow evaluations and 75 cell--workflow groups with 300
 evaluations per group. The task family is \texttt{COMET\_LIKE\_PRIMARY}
 at fidelity level \texttt{F0}.
+
+Reference contrast and contamination amplitude are the two stress coordinates in this controlled implementation: the former changes signal-to-noise difficulty through source gain, while the latter scales structured contamination. The five contrast levels and three contamination levels were fixed as the discrete stress grid used to span low-to-high controlled difficulty; they are experimental coordinates, not claimed population frequencies or survey-derived cut points. The study therefore interprets transitions only at the tested cells and does not assign physical significance to the numerical spacing between levels. They define the tested validation domain rather than implying that astronomical observing conditions are intrinsically two-dimensional.
 
 The same sample identity preserves \(r_n\), interference seeds, and the
 unscaled structured-contamination realization across all 15 cells. Thus
@@ -227,11 +268,11 @@ log-spaced \(r_n\) values from 0.1 to 10 km. Measured flux is mapped
 back to \(r_n\) by log-flux interpolation. Calibration is constructed
 separately for each workflow and source-gain level.
 
-\subsection{Pre-registered compact-PSF extension}
-\label{pre-registered-compact-psf-extension}
+\subsection{Compact-PSF extension}
+\label{compact-psf-extension}
 
-A second controlled family, \texttt{COMPACT\_PSF\_PRIMARY}, was
-pre-registered and executed as a separately versioned extension after
+A second controlled family, \texttt{COMPACT\_PSF}\allowbreak\texttt{\_PRIMARY}, was
+specified and frozen before outcome generation, then executed as a separately versioned extension after
 the comet-like production had been frozen. It contains 300 base
 identities crossed with the same five reference-contrast targets and
 three contamination levels. Because no scientifically meaningful
@@ -262,28 +303,75 @@ latter used 2,000 sample-identity bootstrap replicates with seed
 20261004. The same primary \(\tau=0.5\) vulnerability definition and
 the same threshold-sensitivity grid were retained.
 
+\subsection{Independent SEP implementation-transfer experiment}
+\label{sep-transfer-experiment}
+
+To test whether the AMPV experimental-design logic depends on the
+photometric implementation used in the A--E workflow set, a separately
+versioned implementation-transfer experiment was frozen before outcome
+generation. It reuses the compact-PSF scene construction but replaces the
+measurement endpoint with SEP version 1.4.1 \cite{ref11}, an implementation outside
+the A--E workflow code and derived from the Source Extractor code base
+\cite{ref3}. One hundred matched identities were evaluated at
+\(\kappa_{\rm ref}=1,5,20\) and \(C=0,0.6,1.0\), giving 900
+measurements. For every cell, SEP \texttt{sum\_circle} circular-aperture photometry used the
+known source center, a 30-pixel radius, a 50--90 pixel local
+background annulus, and \texttt{subpix=0}. No per-pixel error, variance,
+or gain was supplied to SEP; its returned flux-uncertainty field is
+therefore not used as a scientific uncertainty estimate. Statistical
+uncertainty in this experiment is instead quantified by the
+sample-identity bootstrap described below. No source detection or recentering step was added,
+because the transfer question concerns the measurement implementation
+under the same truth-known matched scenes rather than detection
+completeness.
+
+The integrated injected Gaussian flux remains the truth quantity.
+Signed relative error, absolute relative error, and the frozen
+\(\tau=0.5\) vulnerability rule are therefore unchanged. The transfer
+analysis uses 2,000 sample-identity bootstrap replicates with fixed seed
+20261004. Before the N=100 production, a separate N=3 software smoke test
+was restricted to finite-output, row-count, and SEP-flag checks and was
+not used as scientific evidence or to tune the frozen design. The
+transfer criterion did not require SEP to outperform any internal
+workflow: support required a non-degenerate cell-resolved reliability
+surface and bootstrap-supported systematic change along at least one
+frozen stress axis. This experiment is an external-implementation
+transfer test, not observational or survey validation.
+
 \subsection{Error quantities and operational vulnerability
 criterion}\label{error-quantities-and-operational-vulnerability-criterion}
 
 Signed relative error is defined with the family-specific estimand. For
-\texttt{COMET\_LIKE\_PRIMARY},
+the comet-like primary family (\texttt{COMET\_LIKE\_PRIMARY}),
 \[
 e=(r_n^{\rm est}-r_n^{\rm true})/r_n^{\rm true},
 \]
-whereas for \texttt{COMPACT\_PSF\_PRIMARY},
+whereas for the compact-PSF primary family
+(\texttt{COMPACT\_PSF\_PRIMARY}),
 \[
 e=(F^{\rm est}-F_{\rm true})/F_{\rm true}.
 \]
 In both families, absolute error is \(|e|\). Continuous error is the
-primary measure of estimation behavior. The predefined vulnerability indicator
+primary measure of estimation behavior. The frozen operational vulnerability indicator
 uses \(|e|>\tau\) with the primary frozen operational threshold
-\(\tau=0.5\), corresponding to a 50\% relative-error cutoff. This
-threshold is not treated as a universal astronomical standard; its
-robustness is examined by sensitivity analyses at
+\(\tau=0.5\), corresponding to a 50\% relative-error cutoff. The value
+is an operational demonstration threshold chosen for the controlled
+validation experiment, not a survey requirement, physical transition,
+or universal astronomical acceptance standard. Accordingly, continuous
+error remains the primary evidence, and the robustness of the derived
+threshold summaries is examined at
 \(\tau=0.25,0.4,0.5,0.6,0.75,\) and \(1.0\).
 
 \subsection{Paired uncertainty and robustness
 analyses}\label{paired-uncertainty-and-robustness-analyses}
+
+The production size of 300 identities per primary task family was fixed
+before outcome generation as the replication budget for the cell-resolved
+matched experiment. It is not presented as a power-optimal or universally
+sufficient astronomical sample size. Because the scientific comparisons
+are paired across stress cells, precision is evaluated from the observed
+sample-identity bootstrap intervals rather than justified retrospectively
+from the realized effect sizes.
 
 Uncertainty analyses use the 300 sample identities within each task
 family as the resampling units. A cluster-bootstrap replicate samples
@@ -312,35 +400,25 @@ provenance}\label{reproducibility-and-provenance}
 
 For each task family, the experimental design, seed namespace, workflow
 definitions, and stress grid were frozen before that family's production.
-The original comet-like canonical release was not modified when the
-separately versioned compact-PSF extension was added. Numerical summaries
-and figures were generated from the corresponding verified production
-rows and audited derived-analysis records without altering either
-production output. Detailed hashes, audit gates,
-and engineering provenance are retained in the reproducibility archive
-rather than repeated in the scientific narrative.
+The original comet-like analysis was not modified when the separately
+versioned compact-PSF extension was added. Numerical summaries and figures
+were generated from the corresponding versioned production outputs without
+altering either experiment. These controls support reproducibility and guard
+against outcome-dependent redefinition; they are not treated as the
+scientific novelty of AMPV. Detailed provenance records are retained in the
+reproducibility archive rather than repeated in the scientific narrative.
 
-\subsection{Ethical applicability and AI-assisted
-workflow}\label{ethical-applicability-and-ai-assisted-workflow}
+\subsection{AI-assisted workflow}\label{ai-assisted-workflow}
+
+OpenAI ChatGPT was used for English-language editing and manuscript organization and as a technical assistant for parts of Python, PowerShell, and LaTeX workflow development, review, testing, and reproducibility-audit organization. Scientific results were derived from frozen, version-controlled computational outputs and independently checked by the author. All study-design, methodological, interpretive, and submission decisions remained the author's responsibility, and the author reviewed the final code and manuscript and takes responsibility for the work.
+
+\subsection{Ethical applicability}\label{ethical-applicability}
 
 The present work is a computational validation study based on synthetic
-astronomical scenes and simulation outputs. The AMPV V2 evidence chain
-contains no human-participant, animal-subject, clinical-trial, or
-personally identifiable data. On that project-evidence basis,
-institutional human/animal research approval and informed consent are
-not applicable to the current study scope. \textbf{{[}AUTHOR
-CONFIRMATION REQUIRED BEFORE SUBMISSION{]}}
-
-ChatGPT (OpenAI) was used as an assistive tool during manuscript
-preparation and reproducibility-workflow development. Its use included
-language editing; drafting and reviewing Python, PowerShell, and LaTeX
-workflow scripts; organizing provenance and audit records; supporting
-literature-audit and citation-workflow organization; and assisting with
-figure-layout and manuscript-assembly tasks. AI assistance did not
-replace the AMPV V2 numerical evidence chain. The authors remain
-responsible for independent verification of scientific content, source
-use, code execution records, numerical results, interpretations, and the
-final manuscript text. ChatGPT is not an author.
+astronomical scenes and simulation outputs. It contains no human-participant,
+animal-subject, clinical-trial, or personally identifiable data. Institutional
+human/animal research approval and informed consent are therefore not
+applicable to the current study scope.
 
 \section{Results}\label{results}
 
@@ -352,7 +430,7 @@ reference-contrast levels
 (reference contrast = 1, 2, 5, 10, 20), three contamination
 levels (\texttt{C\ =\ 0,\ 0.6,\ 1.0}), and workflows A--E. The
 comet-like values reported in the following subsections are derived from
-the verified canonical release and audited numerical ledger; the
+the corresponding versioned production and analysis outputs; the
 compact-PSF extension is reported separately from its independently
 frozen production.
 
@@ -388,7 +466,7 @@ workflow-level summaries are shown in Fig. 2.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.88\linewidth]{figures/FIGURE_2_GLOBAL_CONTEXT.pdf}
-\caption{Global pooled descriptive context for the primary comet-like experiment.}
+\caption{Global pooled descriptive context for the primary comet-like experiment. Values aggregate all 15 stress cells for orientation only; inferential and boundary claims in the text use matched, cell-resolved analyses rather than this pooled view.}
 \label{fig:global-context}
 \end{figure}
 
@@ -396,25 +474,33 @@ workflow-level summaries are shown in Fig. 2.
 landscape}\label{cell-resolved-error-and-vulnerability-landscape}
 
 The 15 experimental cells show substantial variation in median absolute
-error and in the fraction of evaluations exceeding the predefined
+error and in the fraction of evaluations exceeding the frozen operational
 vulnerability threshold
-(\texttt{\textbar{}e\textbar{}\ \textgreater{}\ 0.5}). The cell-resolved
+(\(|e|>0.5\)). The cell-resolved
 median absolute-error landscape is shown in Fig. 3, and the
 corresponding vulnerability landscape is shown in Fig. 4. For each cell,
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.88\linewidth]{figures/FIGURE_3_MEDIAN_ABS_ERROR_LANDSCAPE.pdf}
-\caption{Cell-resolved median absolute-error landscape for the primary comet-like experiment.}
+\caption{Cell-resolved median absolute-error landscape for the primary comet-like experiment across the tested reference-contrast and contamination grid. The surface is descriptive at the tested cells; paired sample-identity bootstrap contrasts are reported separately and no interpolation beyond the grid is implied.}
 \label{fig:median-abs}
 \end{figure}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.88\linewidth]{figures/FIGURE_4_VULNERABILITY_LANDSCAPE.pdf}
-\caption{Cell-resolved vulnerability landscape for the primary comet-like experiment at the primary threshold.}
+\caption{Cell-resolved vulnerability landscape for the primary comet-like experiment at the frozen operational threshold $|e|>0.5$. The threshold is an operational summary rather than a physical transition; sensitivity to alternative thresholds is evaluated separately.}
 \label{fig:vulnerability}
 \end{figure}
-the observed numerical span across workflows is:
+the observed numerical span is summarized by the surfaces rather than
+repeated cell by cell in the main text. Across the tested grid, the
+lowest cell-level median absolute errors occur for workflow E, whereas
+the largest values are associated with workflow C in the low-reference-
+contrast regime. Vulnerability shows the same broad concentration toward
+the low-contrast region, while the detailed workflow-relative structure
+changes with contamination. Complete values for all 75 cell--workflow
+groups are retained in Table S1.
 
+\iffalse
 \begin{itemize}
 \tightlist
 \item
@@ -478,12 +564,7 @@ the observed numerical span across workflows is:
   (lower endpoint: E; upper endpoint: C); vulnerability spans
   0.0\%--4.0\% (lower endpoint: E; upper endpoint: C).
 \end{itemize}
-
-The corresponding cell-resolved values are listed below.
-
-Complete cell-level values for all 75 cell--workflow groups, including
-median absolute error, vulnerability rate, median signed error, and
-realized contrast, are provided in Table S1.
+\fi
 
 \subsection{Signed-error behavior}\label{signed-error-behavior}
 
@@ -544,7 +625,7 @@ settings.
 
 Threshold sensitivity confirms that the numerical location of a
 threshold-defined boundary depends on the operational cutoff. The
-primary \(\tau=0.5\) analysis exactly reproduces the predefined
+primary \(\tau=0.5\) analysis exactly reproduces the frozen operational
 boundary table below. At \(\tau=0.4\), the A boundary at \(C=1\) moves
 from \(\kappa_{\rm ref}=5\) to 10; at \(\tau=0.6\), the E boundary at
 \(C=0.6\) moves from 2 to 1 while the A--D primary boundaries are
@@ -557,7 +638,7 @@ Excluding the three Workflow-E evaluations with optimizer
 by at most \(9.02\times10^{-5}\), indicating no material effect on the
 reported reliability landscape.
 
-\subsection{Pre-registered compact-PSF extension}
+\subsection{Compact-PSF extension}
 \label{results-compact-psf-extension}
 
 The second family contains 300 base identities and 18,000 workflow
@@ -567,7 +648,7 @@ contamination contrasts comparing \(C=0.6\) or 1 with \(C=0\) had
 contrasts, 32 had intervals below zero; the remaining 16 were all
 \(C=0\) clean cells, where error was already at the numerical floor.
 Restricting the comparison to contaminated cells therefore gives 32 of
-32 adjacent-\(\kappa\) intervals below zero.
+32 adjacent-\(\kappa\) intervals below zero (Table S3).
 
 Workflow-relative structure also differed from the comet-like family.
 Within contaminated compact-PSF cells, workflow E had lower paired
@@ -582,6 +663,38 @@ low-contrast, high-contamination region; by
 even at \(\tau=0.25\), apart from one 1/300 event for workflow C at
 \(\kappa_{\rm ref}=5,C=1\).
 
+\subsection{Independent SEP implementation transfer}
+\label{results-sep-transfer}
+
+The independently implemented SEP endpoint produced finite measurements
+with zero nonzero SEP flags in all 900 production rows. Its
+cell-resolved median absolute error increased with contamination and
+decreased with reference contrast wherever contamination produced
+non-negligible error. At \(\kappa_{\rm ref}=1\), median absolute
+error was at numerical floor for \(C=0\), 0.170 for \(C=0.6\), and
+0.283 for \(C=1\). The corresponding contaminated-cell medians were
+0.0340 and 0.0566 at \(\kappa_{\rm ref}=5\), and 0.00849 and
+0.0141 at \(\kappa_{\rm ref}=20\).
+
+All six paired contamination-versus-clean contrasts had 95\%
+sample-identity bootstrap intervals strictly above zero. For the
+reference-contrast axis, all four contaminated-domain comparisons
+(1 to 5 and 5 to 20 at \(C=0.6\) and \(C=1\)) had intervals
+strictly below zero for
+\(\Delta|e|=|e|_{\kappa_{\rm high}}-|e|_{\kappa_{\rm low}}\).
+The two clean-domain reference-contrast comparisons were at numerical
+floor and were not counted as directional evidence. At the operational
+\(\tau=0.5\) threshold, the observed vulnerable fraction was 0.01
+for \(\kappa_{\rm ref}=1,C=0.6\) and 0.10 for
+\(\kappa_{\rm ref}=1,C=1\); it was zero in the other seven tested
+cells. Complete SEP cell summaries and paired contrasts are reported in Tables S4--S6.
+
+These results satisfy the pre-outcome transfer criterion: an independent
+measurement implementation recovers a non-degenerate, cell-resolved
+stress response with bootstrap-supported changes along both tested
+stress axes in the contaminated domain. They do not establish
+observational validity or general superiority of SEP.
+
 \section{Discussion}\label{discussion}
 
 \subsection{Reliability is a landscape rather than a single aggregate
@@ -589,34 +702,14 @@ score}\label{reliability-is-a-landscape-rather-than-a-single-aggregate-score}
 
 The frozen AMPV V2 results are most naturally interpreted as a
 reliability landscape over reference contrast and contamination level,
-rather than as a single global ordering of workflows. The global
-summaries are:
+rather than as a single global ordering of workflows. The pooled
+summaries reported above remain useful for orientation, but they do not
+identify the stress cells in which workflow-relative behavior changes.
+The scientific role of the reliability map is therefore to preserve
+where a performance statement holds, where it weakens, and where a
+separately targeted validation would be required.
 
-\begin{itemize}
-\tightlist
-\item
-  Workflow A: global median \textbar e\textbar=0.019; global
-  vulnerability=5.5\%; global median signed e=0.012.
-\item
-  Workflow B: global median \textbar e\textbar=0.015; global
-  vulnerability=4.8\%; global median signed e=0.0057.
-\item
-  Workflow C: global median \textbar e\textbar=0.061; global
-  vulnerability=15.3\%; global median signed e=8.852e-04.
-\item
-  Workflow D: global median \textbar e\textbar=0.015; global
-  vulnerability=5.0\%; global median signed e=0.0025.
-\item
-  Workflow E: global median \textbar e\textbar=0.0034; global
-  vulnerability=1.8\%; global median signed e=8.213e-04.
-\end{itemize}
-
-These aggregate values are useful for orientation, but they pool cells
-whose error and vulnerability behavior can differ materially. For that
-reason, the cell-resolved surfaces remain the primary evidence for
-identifying stable and vulnerable operating regions.
-
-Across the frozen reference-contrast grid, median absolute error and
+Across the tested reference-contrast grid, median absolute error and
 vulnerability generally decline as reference contrast increases for all
 workflows and contamination levels. The strongest residual vulnerability
 occurs for workflow C at low contrast, while workflow E reaches low
@@ -627,7 +720,12 @@ Supplementary Note S1.
 This pattern supports the methodological use of AMPV as a
 boundary-mapping framework: the relevant question is not only whether
 two workflows differ on average, but also whether their error behavior
-remains stable as the controlled stressors move across the grid.
+remains stable as the controlled stressors move across the grid. In a
+pipeline-development setting, such maps can identify regions that merit
+additional diagnostics, an alternative estimator, or a separately
+targeted validation experiment. Those downstream deployment choices are
+not tested here; the present contribution is the evidence structure used
+to locate the candidate regions.
 
 \subsection{Contamination changes the shape of the reliability
 surface}\label{contamination-changes-the-shape-of-the-reliability-surface}
@@ -643,7 +741,7 @@ Supplementary Note S2.
 \subsection{A threshold-based view exposes operational
 boundaries}\label{a-threshold-based-view-exposes-operational-boundaries}
 
-Using the predefined vulnerability threshold \textbar e\textbar{}
+Using the frozen operational vulnerability threshold \textbar e\textbar{}
 \textgreater{} 0.5, the lowest tested reference contrast at which
 vulnerability is \textless=5\% is summarized below.
 
@@ -663,13 +761,12 @@ E & 1 & 2 & 2 \\
 
 This boundary table should be interpreted only within the tested grid.
 \cite{ref6} It does not imply behavior between untested reference-contrast levels,
-and it should not be extrapolated beyond the frozen contamination range.
+and it should not be extrapolated beyond the tested contamination range.
 
 \subsection{Information class matters for
 interpretation}\label{information-class-matters-for-interpretation}
 
-The frozen production metadata distinguish workflow D as the
-oracle-diagnostic information class, whereas the remaining workflows are
+Workflow D belongs to the oracle-diagnostic information class, whereas the remaining workflows are
 blind. Therefore, numerical differences involving D should not be
 interpreted as if all workflows operate under the same information
 constraints. Workflow D is used as a diagnostic reference for what
@@ -699,7 +796,7 @@ grid.
 task-dependent}\label{cross-family-structure}
 
 The extension does not reproduce a fixed workflow ordering, nor was
-that the pre-registered transfer criterion. Across both controlled
+that the frozen transfer criterion. Across both controlled
 families, increasing tested reference contrast is associated with lower
 paired absolute error wherever nontrivial error remains, compound
 contamination changes the reliability landscape, and matched identities
@@ -707,27 +804,28 @@ resolve workflow-dependent structure. However, the detailed
 contamination response, workflow ordering, and vulnerability boundaries
 differ between the comet-like and compact-PSF tasks.
 
-This heterogeneity is methodologically informative. In the comet-like
-family, contamination is not uniformly monotonic and A--B behavior
-changes with contamination. In the compact-PSF family, all tested
-contamination contrasts are adverse and the Gaussian-fitting workflow
-benefits from direct model match. AMPV should therefore be interpreted
-as a framework for estimating task-conditional reliability structure,
-not for assigning a task-independent score or universal workflow
-ranking.
+This heterogeneity is the key methodological result rather than a
+failure to reproduce a common ranking. In the comet-like family,
+contamination is not uniformly monotonic and A--B behavior changes with
+contamination. In the compact-PSF family, all tested contamination
+contrasts are adverse and the Gaussian-fitting workflow benefits from
+direct model match. A pooled benchmark can summarize these families but
+cannot by itself preserve where the workflow-relative conclusions
+change. AMPV makes that conditionality an explicit validation output.
+It should therefore be interpreted as a framework for estimating
+task-conditional reliability structure, not for assigning a
+task-independent score or universal workflow ranking.
 
 \subsection{What the present experiment does and does not
 establish}\label{what-the-present-experiment-does-and-does-not-establish}
 
-The study contains two frozen single-fidelity controlled experiments.
-The original canonical comet-like production establishes the tested
-reliability landscape for \texttt{COMET\_LIKE\_PRIMARY}, the five
-reference-contrast levels, the three contamination levels, and workflows
-A--E under its V2-native matched stochastic design. The separately
-versioned compact-PSF extension establishes the corresponding tested
-landscape for \texttt{COMPACT\_PSF\_PRIMARY} with blind workflows
-A, B, C, and E. Neither production is retroactively redefined by the
-other.
+The study contains two single-fidelity controlled experiments.
+The primary comet-like experiment establishes the tested reliability
+landscape for its five reference-contrast levels, three contamination
+levels, and workflows A--E. The separately versioned compact-PSF
+extension establishes the corresponding landscape for blind workflows
+A, B, C, and E under the same stress-grid structure. The two experiments
+remain analytically distinct.
 
 It does \textbf{not} by itself establish fidelity dependence across
 multiple simulation fidelities. \cite{ref5} Any manuscript claim about
@@ -743,46 +841,38 @@ methodological: it provides a reproducible way to expose where a
 workflow remains stable, where it becomes vulnerable, and which
 controlled stressors are associated with those changes.
 
-\subsection{Relationship between AMPV and
-CAPS}\label{relationship-between-ampv-and-caps}
-
-AMPV and CAPS are kept conceptually distinct. AMPV is the general
-validation methodology developed around reliability mapping and boundary
-analysis, whereas CAPS is one controlled synthetic implementation
-environment that can support such validation experiments. The present V2
-production is independently realized and canonically frozen within the
-AMPV V2 project tree; CAPS V1 production outputs are not used as the
-present canonical evidence.
-
-This framing avoids treating AMPV as merely a renamed workflow or a
-simple continuation of the earlier ranking study.
-
 \subsection{Limitations and next validation
 steps}\label{limitations-and-next-validation-steps}
 
 The present results are bounded by the tested grids, the two controlled
 synthetic task families, the current fidelity level, and their synthetic
-forward-model assumptions. The current analysis also uses a predefined vulnerability
+forward-model assumptions. The current analysis also uses a frozen operational vulnerability
 threshold of 0.5; alternative thresholds may change the location of
 threshold-defined boundaries even when the underlying continuous error
 surface is unchanged. The explicit sensitivity analysis confirms this
 dependence and therefore supports interpreting the threshold table as an
 operational diagnostic rather than a physical transition.
 
-Useful next validation steps include testing additional fidelity levels,
-expanding the stress grid where transitions appear sharp, and evaluating
-the framework with observationally anchored injections, real-image test
-sets, or independently implemented community pipelines.
-\cite{ref6} \cite{ref5} These extensions should be run as new, versioned
-experiments rather than retrofitted into the frozen canonical release.
+The SEP transfer experiment addresses one part of the previous
+implementation-dependence limitation by showing that the matched
+stress-grid design can be applied to a measurement endpoint outside the
+A--E workflow implementation. It does not address observational realism:
+the scenes remain synthetic, the source position is known, and the
+transfer grid contains only three tested reference-contrast levels.
+Useful next validation steps therefore include testing additional
+fidelity levels, expanding the stress grid where transitions appear
+sharp, and evaluating the framework with observationally anchored
+injections or real-image test sets. \cite{ref6} \cite{ref5} These
+extensions should be evaluated as new, separately versioned experiments
+rather than retrofitted into the present analysis.
 
-Literature-dependent context is limited to the source-level-audited
-references. Interpretation of the present numerical results remains
-separated from prior-art context and is restricted to the frozen tested grids, information classes, and single-fidelity production records.
+Interpretation of the numerical results is restricted to the tested
+grids, information classes, and single-fidelity experiments described
+here.
 
 \section{Conclusions}\label{conclusions}
 
-The primary frozen AMPV V2 comet-like experiment demonstrates a
+The primary AMPV V2 comet-like experiment demonstrates a
 reproducible way to evaluate photometric workflows as a reliability
 landscape rather than as a single aggregate ranking. Across 300 base
 stochastic identities, 4,500 condition-specific scene instances, and
@@ -792,27 +882,43 @@ class, and matched-scene provenance across the tested reference-contrast
 and contamination grid.
 
 The results support boundary-oriented reporting: workflow behavior
-varies across the frozen stress grid, and pooled summaries alone do not
+varies across the tested stress grid, and pooled summaries alone do not
 preserve the full structure of those changes. The common-random-number
 design follows an established simulation-comparison strategy
-\cite{ref7}, while reproducibility and traceability in the present study
-are provided by the audited canonical release chain.
+\cite{ref7}, while the matched design and versioned analysis outputs provide
+reproducibility and traceability in the present study.
 
-The pre-specified, internally frozen extension broadens the evidence from one to two
-materially distinct controlled synthetic photometric task families.
-Both recover cell-resolved stress-dependent reliability structure, while
-their workflow-relative behavior and operational boundaries differ.
-This supports task-conditional reliability mapping rather than a
-universal ranking interpretation.
+The compact-PSF extension, specified and frozen before outcome
+generation, broadens the evidence from one to two materially distinct
+controlled synthetic photometric task families. Within these two tested
+families, both recover cell-resolved stress-dependent reliability
+structure, while their workflow-relative behavior and operational
+boundaries differ. A further pre-outcome-frozen transfer test replaced
+the A--E measurement endpoint with SEP photometry for 100 matched
+compact-PSF identities. All six contamination-versus-clean contrasts
+were interval-supported as adverse, and all four contaminated-domain
+reference-contrast comparisons were interval-supported as improving
+with higher tested contrast. Thus the experimental-design logic also
+produced a resolved reliability surface outside the internal A--E
+measurement implementation, without establishing universality beyond
+the tested synthetic validation domains.
 
 The present evidence is intentionally bounded. It is a single-fidelity
 synthetic study and therefore does not establish multi-fidelity
 dependence. More generally, the synthetic evidence should not be assumed
 to generalize unchanged to observational datasets outside the tested
 validation domain \cite{ref5,ref6}. Those questions require separately
-versioned validation experiments rather than reinterpretation of the
-frozen release.
+versioned validation experiments rather than reinterpretation of the present results.
 
-Within that scope, AMPV provides a methodology for moving from average
-workflow comparison toward explicit mapping of stable and vulnerable
-operating regions under controlled perturbation.
+Within that scope, AMPV does not introduce the general V\&V principle that validation is domain-bounded. Its methodological contribution in this astronomical workflow setting is to preserve, within a reproducible comparative experiment, the structure that pooled benchmarking discards: matched
+stochastic identities, explicit stress coordinates, workflow information
+classes, continuous error surfaces, and operational vulnerability
+boundaries. The two tested task families show why that distinction
+matters: broad stress-response structure can be recovered reproducibly
+without implying a task-independent workflow ordering. AMPV therefore
+supports validation claims about where and under which tested conditions a
+workflow is reliable, rather than only which workflow has the best pooled
+score.
+
+
+
